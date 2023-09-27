@@ -1,0 +1,80 @@
+// Нам нужно повысить приоритет селектора, для того чтобы перебить стили jSuites.
+// Нужно вокруг контейнера наших табов, сделать ещё один контейнер, в нашем случае это .process
+.process {
+    .jtabs-headers {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        position: relative;
+
+        @media (max-width: $md2) {
+            overflow-x: auto;
+            gap: 3rem;
+
+            padding-left: 1.6rem;
+
+            &::-webkit-scrollbar {
+                width: 0px;
+            }
+        }
+
+        &::after {
+            content: "";
+
+            position: absolute;
+            z-index: 10;
+            bottom: 0px;
+            left: 1.6rem;
+            background-color: rgba(2, 6, 14, 0.1);
+            width: 110%;
+            height: 2px;
+        }
+    }
+
+    .jtabs-content {
+        padding: 20px 0 0 0;
+    }
+
+    .jtabs .jtabs-headers > div:not(.jtabs-border) {
+        background-color: transparent;
+        color: #02060e;
+        width: 100%;
+        text-align: start;
+        padding-left: 5px;
+
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 110%;
+        text-transform: uppercase;
+
+        @media (max-width: $md1) {
+            font-size: 13.5px;
+            opacity: 0.2;
+            text-align: center;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+
+    .jtabs-selected {
+        background-color: transparent;
+        color: #fff;
+
+        transition: 0.2s ease-in-out all;
+
+        @media (max-width: $md1) {
+            opacity: 1;
+        }
+    }
+
+    .jtabs-border {
+        background-color: #f9c037;
+        position: absolute;
+        z-index: 15;
+    }
+
+    .jtabs-controls {
+        display: none;
+    }
+}

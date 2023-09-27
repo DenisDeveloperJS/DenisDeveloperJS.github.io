@@ -1,0 +1,43 @@
+.question {
+    width: 100%;
+
+    margin-bottom: 9.2rem;
+
+    @media (max-width: $md2) {
+        margin-bottom: 6.4rem;
+    }
+}
+
+.question__title {
+    padding-bottom: 2rem;
+
+    @media (max-width: $md2) {
+        border-bottom: 1px solid rgba(2, 6, 14, 0.2);
+    }
+}
+
+.question-item {
+    // .question-item__item
+    &__item {
+    }
+    // .question-item__name
+    &__name {
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 120%;
+
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 120%;
+        color: #02060e;
+
+        max-width: 595px;
+
+        padding-top: 2.4rem;
+
+        @media (max-width: $md2) {
+            font-size: 12px;
+            width: 85%;
+        }
+    }
+}

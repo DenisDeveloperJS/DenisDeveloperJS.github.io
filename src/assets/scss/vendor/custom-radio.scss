@@ -1,0 +1,92 @@
+// $width - ширина radio
+// $height - высота radio
+// $factor - насколько большим должен быть внутрений кружок radio. Менять 0.53, и будет менятся внутрений кружок
+// $borderWidth - ширина border radio
+// $backgroundColor - задний фон radio
+// $colorBorder - цвет border radio
+// $colorCircle - цвет внутренего кружка radio
+
+// Использования в коде
+
+// 1. HTML - создаст один radio
+/*
+
+    <label class="custom-radio">
+        <input type="radio" class="custom-radio__input" required />
+        <span class="custom-radio__text _1">Text2</span>
+    </label>
+
+
+*/
+
+//  CSS - себе в файл с блоком скопировать
+/*
+        .custom-radio {
+            cursor: pointer;
+            position: relative;
+
+            // Нужно <span> написать свой сбственый класс и его стилизировать
+            &__text {
+                &._1 {
+                    position: absolute; // Не менять
+                    top: 50%; // НЕ менять
+                    left: 100px; // Менять
+                    color: blue; // Менять
+                    font-size: 2rem; // Менять
+
+                    transform: translateY(-50%);
+                }
+                &._2 {
+                    position: absolute; // Не менять
+                    top: 50%; // НЕ менять
+                    left: 100px; // Менять
+                    color: blue; // Менять
+                    font-size: 2rem; // Менять
+
+                    transform: translateY(-50%);
+                }
+            }
+
+            @include custom-radio(80px, 80px, 0.53, 5px, black, green, red);
+        }
+
+*/
+
+@mixin custom-radio($width, $height, $factor, $borderWidth, $backgroundColor, $colorBorder, $colorCircle) {
+    &__input {
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: $backgroundColor;
+        margin: 0;
+        cursor: pointer;
+
+        // Менять цвет кружка
+
+        color: currentColor;
+        width: $width;
+        height: $height;
+        border: $borderWidth solid $colorBorder;
+        border-radius: 50%;
+        transform: translateY(0.05em) scale(0.95);
+
+        display: grid;
+        place-content: center;
+    }
+
+    &__input::before {
+        content: "";
+
+        width: $width * $factor;
+        height: $height * $factor;
+        border-radius: 50%;
+        transform: scale(0);
+        transition: 200ms transform ease-in-out;
+
+        // Менять цвет кружка
+        background-color: $colorCircle;
+    }
+
+    &__input:checked::before {
+        transform: scale(1);
+    }
+}

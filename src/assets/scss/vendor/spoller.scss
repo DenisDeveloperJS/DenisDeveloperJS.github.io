@@ -1,0 +1,79 @@
+.spoller._init .spoller__title {
+    cursor: pointer;
+}
+
+.spoller._init .spoller__title {
+    cursor: pointer;
+}
+
+.spoller__title {
+    position: relative;
+    width: 100%;
+
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 120%;
+    text-transform: uppercase;
+
+    color: #02060e;
+    cursor: pointer;
+
+    @media (max-width: $md2) {
+        font-size: 20px;
+
+        padding-right: 3rem;
+    }
+}
+
+.spoller__title::before,
+.spoller__title::after {
+    content: "";
+
+    /* Менять размер крестика/плюсика */
+    width: 26px;
+    height: 2px;
+
+    // Не забыть сменить цвет!
+    background-color: #02060e;
+
+    position: absolute;
+
+    right: 1rem;
+    top: 1rem;
+
+    transition: 0.3s ease transform;
+
+    @media (max-width: $md2) {
+        width: 15px;
+        height: 1px;
+    }
+}
+
+.spoller__title::after {
+    content: "";
+
+    transform: rotate(-90deg);
+}
+
+.spoller__title::after {
+    transform: rotate(-90deg);
+}
+
+.spoller__title._active::after {
+    transform: rotate(0deg);
+}
+
+.block__item {
+    padding-top: 3.6rem;
+    padding-bottom: 3.6rem;
+    border-bottom: 1px solid rgba(2, 6, 14, 0.2);
+
+    @media (max-width: $md2) {
+        padding-top: 2.4rem;
+        padding-bottom: 2.4rem;
+    }
+}
+
+.block {
+    margin: 0 auto;
+}

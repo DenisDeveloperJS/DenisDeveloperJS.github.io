@@ -1,0 +1,86 @@
+// $width - ширина checkbox
+// $height - высота checkbox
+// $border - ширина border checkbox
+// $borderRadius - радиус border checkbox
+// $backgroundColor - задний цвет checkbox
+// $colorBorder - цвет border checkbox
+// $colorTick - цвет галочки checkbox
+
+// Использования в коде
+
+// 1. HTML - создаст один checkbox
+/*
+
+        <input
+            type="checkbox"
+            id="test"
+            class="custom-checkbox"
+        />
+        <label for="test">
+                <span> Text </span>
+                <svg viewBox="0,0,50,50">
+                    <path d="M5 30 L 20 45 L 45 5"></path>
+                </svg>
+        </label>
+
+*/
+
+//  CSS - себе в файл с блоком скопировать
+/*
+        Так же скопировать. ИЗМЕНИТЬ .about__input на свой класс
+
+        input[type="checkbox"].custom-checkbox.about__input {
+            @include custom-checkbox(20px, 20px, 2px, 3px, rgb(239, 239, 239), rgb(255, 143, 143), rgb(65, 65, 65));
+        }
+
+        input[type="checkbox"].custom-checkbox + label span {
+            position: absolute; // Не менять
+            transform: translate(25px, -3px); // Менять
+            color: #000; // Менять
+            font-size: 15px; // Менять
+        }
+*/
+
+@mixin custom-checkbox($width, $height, $border, $borderRadius, $backgroundColor, $colorBorder, $colorTick) {
+    position: absolute;
+    opacity: 0;
+
+    &:checked + label svg path {
+        stroke-dashoffset: 0;
+    }
+
+    &:focus + label {
+        transform: scale(1.03);
+    }
+
+    & + label {
+        display: block;
+        border: $border solid $colorBorder;
+        width: $width;
+        height: $height;
+        border-radius: $borderRadius;
+        cursor: pointer;
+        transition: all 0.1s ease;
+
+        background-color: $backgroundColor;
+
+        &:active {
+            transform: scale(1.05);
+            border-radius: $borderRadius * 1.7;
+        }
+
+        svg {
+            pointer-events: none;
+            path {
+                fill: none;
+                stroke: $colorTick;
+                stroke-width: 4px;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-dasharray: 100;
+                stroke-dashoffset: 101;
+                transition: all 150ms cubic-bezier(1, 0, 0.37, 0.91);
+            }
+        }
+    }
+}

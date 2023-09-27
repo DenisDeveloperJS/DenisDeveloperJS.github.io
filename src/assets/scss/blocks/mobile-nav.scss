@@ -1,0 +1,134 @@
+.mobile-nav {
+    display: none;
+
+    transform: translateY(-101%);
+    transition: 0.3s ease-in transform;
+
+    background-color: #02060e;
+    color: #ffffff;
+    text-align: center;
+
+    @media (max-width: $md1) {
+        display: flex;
+        justify-content: center;
+
+        width: 100%;
+        height: 100%;
+
+        position: fixed;
+        top: -100%;
+        left: 0;
+        z-index: 40;
+    }
+
+    // .mobile-nav__list
+    &__list {
+        @media (max-width: $md1) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            gap: 2.8rem;
+
+            max-width: 30rem;
+
+            overflow: auto;
+        }
+        @media (max-height: 721px) {
+            justify-content: flex-start;
+        }
+
+        @media (max-height: 677px) {
+            gap: 1.5rem;
+        }
+    }
+    // .mobile-nav__item
+    &__item {
+        &._language {
+            margin-bottom: 4.4rem;
+            margin-top: 1rem;
+
+            @media (max-height: 677px) {
+                margin-bottom: 0rem;
+            }
+        }
+        &._social {
+            margin-top: 5.2rem;
+            margin-bottom: 2.8rem;
+
+            @media (max-height: 677px) {
+                margin-top: 0rem;
+            }
+        }
+    }
+    // .mobile-nav__link
+    &__link {
+        font-weight: 400;
+        font-size: 36px;
+        text-align: center;
+
+        transition: 0.3s ease-in-out all;
+
+        @media (any-hover: hover) {
+            &:hover {
+                font-size: 38px;
+            }
+        }
+    }
+
+    &__copyright {
+        margin-top: 2.8rem;
+
+        @media (max-height: 690px) {
+            margin-top: 1rem;
+        }
+    }
+
+    &__language {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &-item {
+            padding: 6px 1.5rem;
+            padding-bottom: 4px;
+
+            font-weight: 400;
+            font-size: 20px;
+            text-align: center;
+            text-transform: uppercase;
+
+            opacity: 0.3;
+
+            border-radius: 24px;
+
+            color: #ffffff;
+
+            transition: 0.2s ease-in-out all;
+            cursor: pointer;
+
+            &._active {
+                background: #ffffff;
+                color: #02060e;
+
+                opacity: 1;
+            }
+
+            &._eng {
+                padding-bottom: 5px;
+            }
+        }
+    }
+
+    &__ru {
+    }
+
+    &__en {
+    }
+
+    // Use .mobile-nav_active
+    &_active {
+        transform: translateY(100%);
+    }
+}

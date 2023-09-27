@@ -1,0 +1,81 @@
+// Переменые
+@import "_vars";
+
+// Сброс
+// @import "vendor/reset";
+@import "vendor/btn";
+
+// Подключение контейнера
+@import "vendor/container";
+
+// Подключение шрифтов
+@import "vendor/fonts";
+
+// Подключение спойлеров
+@import "vendor/spoller";
+
+// Подключение табов
+@import "blocks/tabs";
+
+// Подключение кастомных radio
+@import "vendor/custom-radio";
+
+// Подключение кастомных checkbox
+@import "vendor/custom-checkbox";
+
+// Подключение иконочных шрифтов
+// @import 'vendor/iconfonts';
+
+// Подключение миксинов
+// @import 'mixins'
+
+// Обнуление
+
+.me {
+    border-radius: 50%;
+    border: 3px #000 solid;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%; // Адаптивный шрифт
+    overflow-x: hidden;
+}
+
+body {
+    color: #000; // Стандартный цвет шрифта
+    font-size: 1.4rem; // Стандартный размер шрифта
+    font-family: "PP Neue Machina"; // Подлкюченые шрифты
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    overflow-x: hidden;
+
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+._stop-scroll {
+    overflow: hidden;
+}
+
+// Подключения конкретно файлов библиотеки осуществляется в head.html
+
+/* Blocks */
+
+@import "blocks/header";
+@import "blocks/footer";

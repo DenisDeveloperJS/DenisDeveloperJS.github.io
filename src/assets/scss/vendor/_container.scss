@@ -1,0 +1,7 @@
+._container {
+    padding: 0 3rem;
+
+    @media (max-width: $md2) {
+        padding: 0 1.6rem;
+    }
+}
