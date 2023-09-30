@@ -1,0 +1,87 @@
+.game-block {
+  width: 280px;
+  text-align: center;
+  margin-bottom: 65px;
+
+  @media (max-width: $md2) {
+    margin-bottom: 40px;
+  }
+
+  &:not(:nth-of-type(4n)) {
+    margin-right: 3.7%;
+  }
+
+  &__image {
+    width: 260px;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1%;
+    margin-bottom: 20px;
+
+    @media (max-width: $md2) {
+      font-size: 19px;
+    }
+  }
+
+  &__selector {
+    display: flex;
+    background-color: #eee;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 6px;
+
+    @media (max-width: $md2) {
+      padding: 5px;
+    }
+
+    ul {
+      display: flex;
+      flex: 1;
+
+      &:first-of-type {
+        margin-bottom: 6px;
+      }
+
+      li {
+        padding: 8px;
+        flex: 1;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 14px;
+        @include noselect();
+        &.active {
+          background: #ffffff;
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+          border-radius: 5px;
+          cursor: auto;
+        }
+
+        @media (max-width: $md2) {
+          padding: 7px;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  &__price {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.015em;
+
+    @media (max-width: $md2) {
+      font-size: 20px;
+    }
+  }
+}
