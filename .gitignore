@@ -1,6 +1,0 @@
-node_modules
-package-lock.json
-.gitignore
-Change logs.txt
-gulpfile.js
-package.json
