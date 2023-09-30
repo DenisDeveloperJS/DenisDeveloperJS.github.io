@@ -4,7 +4,7 @@ export const fetchGames = (sortBy, category, order) => dispatch => {
 	dispatch(setLoaded(false));
 	axios
 		.get(
-			`http://localhost:3001/games?${
+			`https://denisdeveloperjs.github.io/games?${
 				category === null ? "" : `category=${category}`
 			}&_sort=${sortBy}&_order=${order}`
 		)
