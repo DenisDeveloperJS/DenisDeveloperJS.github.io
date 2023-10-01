@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.33139865.css",
-    "main.js": "/static/js/main.6b7cfad6.js",
+    "main.css": "/static/css/main.e9bf8250.css",
+    "main.js": "/static/js/main.a6e18de3.js",
     "static/media/ProximaNova-Regular.eot": "/static/media/ProximaNova-Regular.d97f8f32c098b28c3ab0.eot",
     "static/media/ProximaNova-Regular.ttf": "/static/media/ProximaNova-Regular.b078618b41b9b6629ea0.ttf",
     "static/media/ProximaNova-Bold.eot": "/static/media/ProximaNova-Bold.787088b281e017f8c449.eot",
@@ -15,12 +15,20 @@
     "static/media/ProximaNova-Extrabld.woff": "/static/media/ProximaNova-Extrabld.64f095e95e4018946cb1.woff",
     "static/media/ProximaNova-Black.woff": "/static/media/ProximaNova-Black.131eab64b8a971a4fc73.woff",
     "static/media/empty-cart.svg": "/static/media/empty-cart.18bce94843b9dc442f8853e7b2c330c3.svg",
+    "static/media/Visa.svg": "/static/media/Visa.08bbf3afeeb10a65bb431e0945eb16a6.svg",
+    "static/media/Qiwi.svg": "/static/media/Qiwi.968f68c822e04c211ed1d58a46e5d803.svg",
+    "static/media/MasterCard.svg": "/static/media/MasterCard.710aae1b6310073ee34801185a82d047.svg",
+    "static/media/MIR.svg": "/static/media/MIR.69ef390f51b4a0751003f22977d2e456.svg",
+    "static/media/Tinkoff.svg": "/static/media/Tinkoff.3078088ac85ecacddc65adaf2b6f3109.svg",
+    "static/media/SPB.svg": "/static/media/SPB.7c9d068c96b396aa9fa19abc0a31215f.svg",
     "index.html": "/index.html",
-    "main.33139865.css.map": "/static/css/main.33139865.css.map",
-    "main.6b7cfad6.js.map": "/static/js/main.6b7cfad6.js.map"
+    "static/media/YouMoney.svg": "/static/media/YouMoney.7b3f4f38a6fb9257a5e53063240abe63.svg",
+    "static/media/AlphaBank.svg": "/static/media/AlphaBank.6fdf4eb3c76091512744539beed28460.svg",
+    "main.e9bf8250.css.map": "/static/css/main.e9bf8250.css.map",
+    "main.a6e18de3.js.map": "/static/js/main.a6e18de3.js.map"
   },
   "entrypoints": [
-    "static/css/main.33139865.css",
-    "static/js/main.6b7cfad6.js"
+    "static/css/main.e9bf8250.css",
+    "static/js/main.a6e18de3.js"
   ]
 }
