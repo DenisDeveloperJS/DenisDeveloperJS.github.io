@@ -8,7 +8,7 @@ function GameBlocks({ games }) {
 	});
 
 	return (
-		<div className="content__items">
+		<>
 			{games.map(item => {
 				return (
 					<GameItem
@@ -18,7 +18,7 @@ function GameBlocks({ games }) {
 					/>
 				);
 			})}
-		</div>
+		</>
 	);
 }
 

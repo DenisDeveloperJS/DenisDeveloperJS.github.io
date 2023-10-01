@@ -29,6 +29,9 @@ function GameItem({ data, addedCount }) {
 			type: types[activeType],
 		};
 		dispatch(addGamesToCart(obj));
+
+		const header = document.querySelector(".header");
+		header.classList.remove("hide");
 	};
 
 	return (

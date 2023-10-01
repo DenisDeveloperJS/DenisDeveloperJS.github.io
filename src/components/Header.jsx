@@ -10,28 +10,30 @@ function Header() {
 
 	// smooth header
 	useEffect(() => {
-		let lastScroll = 0;
-		const defaultOffset = 200;
-		const header = document.querySelector(".header");
+		if (window.innerWidth <= 768) {
+			let lastScroll = 0;
+			const defaultOffset = 200;
+			const header = document.querySelector(".header");
 
-		const containHide = () => header.classList.contains("hide");
+			const containHide = () => header.classList.contains("hide");
 
-		window.addEventListener("scroll", () => {
-			const scrollPosition =
-				window.pageYOffset || document.documentElement.scrollTop;
+			window.addEventListener("scroll", () => {
+				const scrollPosition =
+					window.pageYOffset || document.documentElement.scrollTop;
 
-			if (
-				scrollPosition > lastScroll &&
-				!containHide() &&
-				scrollPosition > defaultOffset
-			) {
-				header.classList.add("hide");
-			} else if (scrollPosition < lastScroll && containHide()) {
-				header.classList.remove("hide");
-			}
+				if (
+					scrollPosition > lastScroll &&
+					!containHide() &&
+					scrollPosition > defaultOffset
+				) {
+					header.classList.add("hide");
+				} else if (scrollPosition < lastScroll && containHide()) {
+					header.classList.remove("hide");
+				}
 
-			lastScroll = scrollPosition;
-		});
+				lastScroll = scrollPosition;
+			});
+		}
 	}, []);
 
 	return (

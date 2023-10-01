@@ -80,6 +80,7 @@ html {
 	&--cart {
 		max-width: 820px;
 		margin: 40px auto;
+		margin-bottom: 120px;
 
 		@media (max-width: $md2) {
 			margin: 0 auto;

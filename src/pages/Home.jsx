@@ -8,6 +8,7 @@ import {
 	setCategory,
 	setSortBy as setSortByAction,
 } from "../redux/actions/filters";
+import Footer from "../components/Footer";
 
 const categoryNames = [
 	"БОЕВИКИ И ПРИКЛЮЧЕНИЯ",
@@ -69,16 +70,19 @@ function Home() {
 				</div>
 
 				<h2 className="content__title">Все игры</h2>
-				{isLoaded ? (
-					<GameBlocks games={games} isLoaded={isLoaded} />
-				) : (
-					Array(4)
-						.fill(0)
-						.map((item, i) => {
-							return <GameLoader key={i} />;
-						})
-				)}
+				<div className="content__items">
+					{isLoaded ? (
+						<GameBlocks games={games} isLoaded={isLoaded} />
+					) : (
+						Array(4)
+							.fill(0)
+							.map((item, i) => {
+								return <GameLoader key={i} />;
+							})
+					)}
+				</div>
 			</div>
+			<Footer />
 		</div>
 	);
 }

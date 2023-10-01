@@ -11,6 +11,7 @@ import {
 
 import CartEmpty from "../components/Cart/CartEmpty";
 import CartItem from "../components/Cart/CartItem";
+import Footer from "../components/Footer";
 
 function Cart() {
 	const { items, totalPrice, totalCount } = useSelector(({ cart }) => cart);
@@ -179,6 +180,7 @@ function Cart() {
 					<CartEmpty />
 				)}
 			</div>
+			<Footer />
 		</div>
 	);
 }
