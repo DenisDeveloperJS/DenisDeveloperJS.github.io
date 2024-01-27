@@ -5,7 +5,7 @@ $message = htmlspecialchars($message);
 
 $message = trim($message);
 
-$from = "denisdevelop4604@gmail.com";
+$from = "selfbrewpl@gmail.com";
 $subject = "New Contact Form Submission";
 
 $headers  = 'MIME-Version: 1.0' . "\r\n";

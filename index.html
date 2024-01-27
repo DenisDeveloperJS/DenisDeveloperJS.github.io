@@ -316,13 +316,19 @@
 							Liczba odwiedzających Twoją lokalizację dziennie:
 						</div>
 						<div class="calculator__range">
-							<div class="calculator__range-res">250|</div>
 							<input
 								type="range"
-								min="100"
+								min="0"
 								max="3000"
 								value="500"
 								class="range-input calculator__range-range"
+								step="100"
+							/>
+							<input
+								type="number"
+								placeholder="500|"
+								value="500"
+								class="range-input calculator__range-number"
 							/>
 						</div>
 					</div>
