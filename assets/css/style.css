@@ -1195,6 +1195,11 @@ body::-webkit-scrollbar {
     }
 }
 
+.steps-block {
+    max-width: 814px;
+    margin: 0 auto;
+}
+
 .steps-block__content {
     display: -ms-flexbox;
     display: flex;
