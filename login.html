@@ -75,18 +75,25 @@
 									<a href="signup.html" class="link">Sign up</a>
 								</h2>
 								<div class="auth__right-inputs">
-									<input
-										type="text"
-										placeholder="Login"
-										name="login"
-										class="auth__input input input_auth"
-									/>
-									<input
-										placeholder="Password"
-										type="password"
-										name="password"
-										class="auth__input input input_auth"
-									/>
+									<div class="container-input">
+										<input
+											type="text"
+											placeholder="Login"
+											name="login"
+											class="auth__input input input_auth auth__input-login"
+										/>
+										<div class="err-message">Error</div>
+									</div>
+		
+									<div class="container-input">
+										<input
+											placeholder="Password"
+											type="password"
+											name="password"
+											class="auth__input input input_auth auth__input-pass"
+										/>
+										<div class="err-message">Error</div>
+									</div>
 								</div>
 							</div>
 							<div class="auth__right-bottom">

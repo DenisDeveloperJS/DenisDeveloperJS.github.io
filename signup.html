@@ -75,24 +75,36 @@
 									<a href="login.html" class="link">Log in</a>
 								</h2>
 								<div class="auth__right-inputs">
-									<input
-										type="text"
-										name="login"
-										class="auth__input input input_auth"
-										placeholder="Login"
-									/>
-									<input
-										placeholder="Password"
-										type="password"
-										name="password"
-										class="auth__input input input_auth"
-									/>
-									<input
-										placeholder="Repeat password"
-										type="password"
-										name="repeat-password"
-										class="auth__input input input_auth"
-									/>
+									<div class="container-input">
+										<input
+											type="text"
+											name="login"
+											class="auth__input input input_auth auth__input-login"
+											placeholder="Login"
+										/>
+										<span class="err-message">Error</span>
+									</div>
+		
+									<div class="container-input">
+										<input
+											placeholder="Password"
+											type="password"
+											name="password"
+											class="auth__input input input_auth auth__input-pass"
+										/>
+										<span class="err-message">Error</span>
+									</div>
+		
+									<div class="container-input">
+										<input
+											placeholder="Repeat password"
+											type="password"
+											name="repeat-password"
+											class="auth__input input input_auth auth__input-pass2"
+										/>
+		
+										<span class="err-message">Error</span>
+									</div>
 								</div>
 							</div>
 							<div class="auth__right-bottom">
