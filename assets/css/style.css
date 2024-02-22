@@ -667,20 +667,20 @@ input[type=radio] {
         }
 */
 .burger-menu-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: none;
+    width: 48px;
+    height: 48px;
+    position: relative;
+    z-index: 1111;
+    display: -ms-flexbox;
+    display: flex;
     -ms-flex-pack: justify;
     justify-content: space-between;
     -ms-flex-align: center;
     align-items: center;
-    padding: 20px;
-    padding-right: 30px;
+    background: #ffffff;
+    border: 1px solid #bdbdbd;
+    padding: 14px;
+    border-radius: 16px;
     -webkit-transform: translateY(0%);
     transform: translateY(0%);
     transition: 0.25s ease-in-out all;
@@ -701,15 +701,31 @@ input[type=radio] {
 .burger-icon {
     cursor: pointer;
     display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .bar {
     display: block;
-    width: 30px;
+    width: 20px;
     height: 3px;
     background-color: black;
-    margin: 6px 0;
+    margin: 5px 0;
     transition: 0.4s;
+    border-radius: 30px;
+}
+
+.bar1 {
+    margin-top: 0;
+}
+
+.bar2 {
+    width: 12px;
+}
+
+.bar3 {
+    width: 15px;
+    margin-bottom: 0;
 }
 
 #burger-menu-toggle {
@@ -720,8 +736,8 @@ input[type=radio] {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: white;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f2f2f2;
     z-index: 999;
     transition: 0.25s ease-in-out all;
     -webkit-transform: translateY(-200%);
@@ -773,17 +789,23 @@ input[type=radio] {
 }
 
 #burger-menu-toggle:checked + .burger-icon .bar:nth-child(1) {
-    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
-    transform: rotate(-45deg) translate(-6px, 6px);
+    width: 20px;
+    -webkit-transform: rotate(-45deg) translate(-5px, 5px);
+    transform: rotate(-45deg) translate(-5px, 5px);
+    margin: 0;
 }
 
 #burger-menu-toggle:checked + .burger-icon .bar:nth-child(2) {
+    width: 20px;
     opacity: 0;
+    margin: 0;
 }
 
 #burger-menu-toggle:checked + .burger-icon .bar:nth-child(3) {
-    -webkit-transform: rotate(48deg) translate(-6px, -6.5px);
-    transform: rotate(48deg) translate(-6px, -6.5px);
+    -webkit-transform: rotate(48deg) translate(1px, 1px);
+    transform: rotate(48deg) translate(1px, 1px);
+    width: 20px;
+    margin: 0;
 }
 
 .burger-menu._active {
@@ -877,12 +899,22 @@ input[type=radio] {
     opacity: 0;
 }
 
+.container-input .err-message._no-valid {
+    opacity: 1;
+}
+
 .input {
     padding: 14px 24px;
     border-radius: 16px;
     width: 100%;
     transition: 0.25s ease-in-out all;
     cursor: pointer;
+}
+
+@media (max-width: 767.98px) {
+    .input {
+        padding-left: 52px;
+    }
 }
 
 .input._no-valid + .err-message {
@@ -1011,6 +1043,28 @@ input[type=radio] {
 
 .arrow-btn:active {
     border: 1px solid #000;
+}
+
+.delete-btn {
+    width: 48px;
+    height: 48px;
+    padding: 14px;
+    border-radius: 16px;
+    background-color: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.25s ease-in-out all;
+}
+
+@media (any-hover: hover) {
+    .delete-btn:hover {
+        background: #e1e1e1;
+    }
 }
 
 .filters-btn {
@@ -1236,6 +1290,63 @@ input[type=radio] {
     background-color: #000;
 }
 
+.image-upload-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.image-upload-container .image-upload-input {
+    display: none;
+}
+
+.image-upload-container .image-upload-label {
+    border: 1.5px dashed #000000;
+    width: 15vw;
+    height: 14vw;
+    border-radius: 24px;
+    cursor: pointer;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    transition: 0.25s ease-in-out all;
+}
+
+@media (any-hover: hover) {
+    .image-upload-container .image-upload-label:hover {
+        background-color: #fff;
+        border: 1.5px dashed transparent;
+    }
+}
+
+.image-upload-container .image-gallery {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.image-upload-container .image-gallery .image-item {
+    width: 307px;
+    height: 260px;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-upload-container .image-gallery .image-item img.uploaded-image {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
 *,
 *:before,
 *:after {
@@ -1294,6 +1405,10 @@ body::before {
     margin-left: 259px;
     margin-right: 348px;
     margin-top: -396px;
+}
+
+.main-admin {
+    margin-top: -350px;
 }
 
 .main._no-map {
@@ -1428,6 +1543,48 @@ body::before {
     margin: 16px;
 }
 
+@media (max-width: 767.98px) {
+    .header__content._desc {
+        display: none;
+    }
+}
+
+.header__content._mob {
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+    .header__content._mob {
+        background-color: transparent;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 16px;
+        margin: 0;
+        padding: 16px;
+    }
+}
+
+.header__top-mob {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.header__bottom-mob {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
 .header__left {
     display: -ms-flexbox;
     display: flex;
@@ -1438,6 +1595,12 @@ body::before {
 
 .header__container-search {
     position: relative;
+}
+
+@media (max-width: 767.98px) {
+    .header__container-search {
+        width: 100%;
+    }
 }
 
 .header__container-search img {
@@ -1457,6 +1620,29 @@ body::before {
     -ms-flex-align: center;
     align-items: center;
     gap: 16px;
+}
+
+.header__right._mob {
+    position: absolute;
+    top: -60px;
+    left: 16px;
+    z-index: -1;
+    transition: 0.4s ease-in-out all;
+}
+
+.header__right._mob._active {
+    z-index: 1111;
+    top: 16px;
+}
+
+.header__burger {
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+    .header__burger {
+        display: block;
+    }
 }
 
 .header__btn-auth {
@@ -1575,6 +1761,11 @@ body::before {
     width: 243px;
 }
 
+.categories_burger {
+    width: 100%;
+    padding: 0 16px;
+}
+
 .categories__body {
     padding-left: 16px;
     background-color: #ffffff;
@@ -1591,6 +1782,12 @@ body::before {
     letter-spacing: 0em;
     margin-bottom: 24px;
     padding-left: 32px;
+}
+
+@media (max-width: 767.98px) {
+    .categories__title {
+        padding-left: 16px;
+    }
 }
 
 .categories__list {
@@ -1624,6 +1821,12 @@ body::before {
     }
 }
 
+@media (max-width: 767.98px) {
+    .categories__item {
+        padding-left: 16px;
+    }
+}
+
 .categories__add-to-shop {
     display: -ms-flexbox;
     display: flex;
@@ -1633,6 +1836,12 @@ body::before {
     justify-content: center;
     gap: 8px;
     width: 100%;
+}
+
+@media (max-width: 991.98px) {
+    .categories__add-to-shop {
+        width: auto;
+    }
 }
 
 .recommended-stores__content {
@@ -1821,6 +2030,42 @@ body::before {
     margin-bottom: 24px;
 }
 
+.form-admin-shop__image-upload {
+    position: relative;
+    width: 32%;
+    height: 260px;
+    border-radius: 24px;
+}
+
+.form-admin-shop__image-upload img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.form-admin-shop__image-delete {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.form-admin-shop__gallery {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+.form-admin-shop__photos {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+}
+
 .form-admin-shop label {
     font-size: 16px;
     font-weight: 500;
@@ -1999,6 +2244,10 @@ body::before {
 
 .form-admin-shop__container-hourses span {
     padding-top: 10px;
+}
+
+.form-admin-shop__submit {
+    width: 200px;
 }
 
 .map {
