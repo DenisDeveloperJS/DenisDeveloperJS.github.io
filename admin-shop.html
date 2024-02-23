@@ -381,159 +381,6 @@
 				</aside>
 			</div>
 		</div>
-		<div class="header__bottom-mob">
-			<div class="header__container-search">
-				<img src="../assets/images/icons/search.svg" alt="search" />
-				<input
-					type="text"
-					name="main-header-search"
-					placeholder="Найти в Gekko"
-					class="header__search input input_white"
-				/>
-			</div>
-
-			<div class="header__filters filters-btn">
-				<div class="filters-btn__btn">
-					<svg
-						width="20"
-						height="20"
-						viewBox="0 0 20 20"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path
-							d="M8.43427 14.5867H2.52734"
-							stroke="black"
-							stroke-width="1.5"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-						/>
-						<path
-							d="M11.0693 5.49885H16.9763"
-							stroke="black"
-							stroke-width="1.5"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-						/>
-						<path
-							fill-rule="evenodd"
-							clip-rule="evenodd"
-							d="M6.93089 5.44961C6.93089 4.23494 5.93887 3.25 4.71545 3.25C3.49203 3.25 2.5 4.23494 2.5 5.44961C2.5 6.66429 3.49203 7.64923 4.71545 7.64923C5.93887 7.64923 6.93089 6.66429 6.93089 5.44961Z"
-							stroke="black"
-							stroke-width="1.5"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-						/>
-						<path
-							fill-rule="evenodd"
-							clip-rule="evenodd"
-							d="M17.5002 14.5492C17.5002 13.3345 16.509 12.3496 15.2855 12.3496C14.0614 12.3496 13.0693 13.3345 13.0693 14.5492C13.0693 15.7639 14.0614 16.7488 15.2855 16.7488C16.509 16.7488 17.5002 15.7639 17.5002 14.5492Z"
-							stroke="black"
-							stroke-width="1.5"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-						/>
-					</svg>
-				</div>
-				<div class="filters-btn__content">
-					<div class="filters-btn__category">
-						<div class="filters-btn__name">По расстоянию</div>
-						<div class="filters-btn__list">
-							<div class="filters-btn__item">
-								<div class="filters-btn__category-name">Text</div>
-								<input
-									type="checkbox"
-									id="test"
-									class="custom-checkbox filters-btn__checkbox"
-								/>
-								<label for="test">
-									<span></span>
-									<svg viewBox="0,0,50,50">
-										<path d="M5 30 L 20 45 L 45 5"></path>
-									</svg>
-								</label>
-							</div>
-							<div class="filters-btn__item">
-								<div class="filters-btn__category-name">Text</div>
-								<input
-									type="checkbox"
-									id="test"
-									class="custom-checkbox filters-btn__checkbox"
-								/>
-								<label for="test">
-									<span></span>
-									<svg viewBox="0,0,50,50">
-										<path d="M5 30 L 20 45 L 45 5"></path>
-									</svg>
-								</label>
-							</div>
-							<div class="filters-btn__item">
-								<div class="filters-btn__category-name">Text</div>
-								<input
-									type="checkbox"
-									id="test"
-									class="custom-checkbox filters-btn__checkbox"
-								/>
-								<label for="test">
-									<span></span>
-									<svg viewBox="0,0,50,50">
-										<path d="M5 30 L 20 45 L 45 5"></path>
-									</svg>
-								</label>
-							</div>
-						</div>
-					</div>
-					<div class="filters-btn__category">
-						<div class="filters-btn__name">По расстоянию</div>
-						<div class="filters-btn__list">
-							<div class="filters-btn__item">
-								<div class="filters-btn__category-name">Text</div>
-								<input
-									type="checkbox"
-									id="test"
-									class="custom-checkbox filters-btn__checkbox"
-								/>
-								<label for="test">
-									<span></span>
-									<svg viewBox="0,0,50,50">
-										<path d="M5 30 L 20 45 L 45 5"></path>
-									</svg>
-								</label>
-							</div>
-							<div class="filters-btn__item">
-								<div class="filters-btn__category-name">Text</div>
-								<input
-									type="checkbox"
-									id="test"
-									class="custom-checkbox filters-btn__checkbox"
-								/>
-								<label for="test">
-									<span></span>
-									<svg viewBox="0,0,50,50">
-										<path d="M5 30 L 20 45 L 45 5"></path>
-									</svg>
-								</label>
-							</div>
-							<div class="filters-btn__item">
-								<div class="filters-btn__category-name">Text</div>
-								<input
-									type="checkbox"
-									id="test"
-									class="custom-checkbox filters-btn__checkbox"
-								/>
-								<label for="test">
-									<span></span>
-									<svg viewBox="0,0,50,50">
-										<path d="M5 30 L 20 45 L 45 5"></path>
-									</svg>
-								</label>
-							</div>
-						</div>
-					</div>
-					<button class="filters-btn__btn-apply btn btn_green">Apply</button>
-				</div>
-			</div>
-		</div>
 	</div>
 </header>
  
@@ -896,9 +743,9 @@
 				class="footer__logo"
 			/>
 		</a>
-		<div class="nav footer__nav">
-			<div class="footer__list">
-				<div class="footer__nav-collumn">
+		<nav class="nav footer__nav">
+			<ul class="footer__list">
+				<li class="footer__nav-collumn">
 					<div class="footer__item">
 						<a href="#" class="footer__link link-reverse">Вакансии</a>
 					</div>
@@ -907,26 +754,64 @@
 							>Политика конфиденциальности
 						</a>
 					</div>
-				</div>
-				<div class="footer__nav-collumn">
+				</li>
+				<li class="footer__nav-collumn">
 					<div class="footer__item">
 						<a href="#" class="footer__link link-reverse">Новости</a>
 					</div>
 					<div class="footer__item">
 						<a href="#" class="footer__link link-reverse">Магазины</a>
 					</div>
-				</div>
-				<div class="footer__nav-collumn">
+				</li>
+				<li class="footer__nav-collumn">
 					<div class="footer__item">
 						<a href="#" class="footer__link link-reverse">Фермы</a>
 					</div>
 					<div class="footer__item">
 						<a href="#" class="footer__link link-reverse">Оборудования</a>
 					</div>
-				</div>
-			</div>
-		</div>
+				</li>
+			</ul>
+		</nav>
 		<div class="footer__copyright">© 2024 Gekko</div>
+	</div>
+	<div class="footer__content _mob">
+		<div class="footer__content-top">
+			<a href="index.html">
+				<img
+					src="../assets/images/logo-gekko.svg"
+					alt="Gekko"
+					class="footer__logo"
+				/>
+			</a>
+			<div class="footer__copyright">© 2024 Gekko</div>
+		</div>
+		<nav class="nav footer__nav">
+			<ul class="footer__list">
+				<li class="footer__nav-collumn">
+					<div class="footer__item">
+						<a href="#" class="footer__link link-reverse">Вакансии</a>
+					</div>
+					<div class="footer__item">
+						<a href="#" class="footer__link link-reverse">Магазины </a>
+					</div>
+					<div class="footer__item">
+						<a href="#" class="footer__link link-reverse">Оборудования </a>
+					</div>
+				</li>
+				<li class="footer__nav-collumn">
+					<div class="footer__item">
+						<a href="#" class="footer__link link-reverse">Новости</a>
+					</div>
+					<div class="footer__item">
+						<a href="#" class="footer__link link-reverse">Фермы</a>
+					</div>
+					<div class="footer__item">
+						<a href="#" class="footer__link link-reverse">Контакты</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
 	</div>
 </footer>
 
