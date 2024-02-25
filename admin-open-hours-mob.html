@@ -17,6 +17,23 @@
 		<meta name="format-detection" content="telephone=no" />
 		<meta name="description" content="" />
 		
+		<link
+			rel="stylesheet"
+			defer
+			href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+		/>
+		<script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+		<script
+			defer
+			src="https://unpkg.com/leaflet.gridlayer.googlemutant@latest/dist/Leaflet.GoogleMutant.js"
+		></script>
+		
+		<script
+			async
+			defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOXFf7vIdmJV6ayHoz6Ju5CmTq9QDv5uE"
+		></script>
+		
 		<!-- <link
 			rel="apple-touch-icon"
 			sizes="180x180"
@@ -626,6 +643,12 @@
 		</div>
 	</div>
 </div>
+
+<script defer>
+	if (window.innerWidth >= 768) {
+		window.location.href = "admin-shop.html";
+	}
+</script>
 
  <footer class="footer">
 	<div class="footer__content">

@@ -17,6 +17,23 @@
 		<meta name="format-detection" content="telephone=no" />
 		<meta name="description" content="" />
 		
+		<link
+			rel="stylesheet"
+			defer
+			href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+		/>
+		<script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+		<script
+			defer
+			src="https://unpkg.com/leaflet.gridlayer.googlemutant@latest/dist/Leaflet.GoogleMutant.js"
+		></script>
+		
+		<script
+			async
+			defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOXFf7vIdmJV6ayHoz6Ju5CmTq9QDv5uE"
+		></script>
+		
 		<!-- <link
 			rel="apple-touch-icon"
 			sizes="180x180"
@@ -642,7 +659,7 @@
 											type="text"
 											placeholder="10:00 am"
 											name="open-hours-from"
-											class="admin-shop__input admin-shop__input-hourses input input_white admin-shop__input-full"
+											class="admin-shop__input admin-shop__input-hourses input input_white admin-shop__input-full _no-m"
 										/>
 										<div class="err-message">Error</div>
 									</div>

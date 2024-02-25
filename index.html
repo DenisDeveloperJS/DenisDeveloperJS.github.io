@@ -17,6 +17,23 @@
 		<meta name="format-detection" content="telephone=no" />
 		<meta name="description" content="" />
 		
+		<link
+			rel="stylesheet"
+			defer
+			href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+		/>
+		<script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+		<script
+			defer
+			src="https://unpkg.com/leaflet.gridlayer.googlemutant@latest/dist/Leaflet.GoogleMutant.js"
+		></script>
+		
+		<script
+			async
+			defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOXFf7vIdmJV6ayHoz6Ju5CmTq9QDv5uE"
+		></script>
+		
 		<!-- <link
 			rel="apple-touch-icon"
 			sizes="180x180"
@@ -260,11 +277,11 @@
 			<div class="burger-menu">
 				<aside class="categories categories_burger">
 					<div class="categories__content">
-						<div class="categories__body">
+						<div class="categories__body _scroll">
 							<h3 class="categories__title">Категории</h3>
 							<nav class="categories__nav">
 								<ul class="categories__list">
-									<a href="" class="categories__item">
+									<a href="#shops" class="categories__item _scroll">
 										<svg
 											width="20"
 											height="20"
@@ -288,7 +305,7 @@
 										</svg>
 										<span>Магазины</span>
 									</a>
-									<a href="" class="categories__item">
+									<a href="#farms" class="categories__item _scroll">
 										<svg
 											width="20"
 											height="20"
@@ -304,7 +321,7 @@
 
 										<span>Фермы</span>
 									</a>
-									<a href="" class="categories__item">
+									<a href="#equipment" class="categories__item _scroll">
 										<svg
 											width="20"
 											height="20"
@@ -327,7 +344,7 @@
 
 										<span>Оборудование</span>
 									</a>
-									<a href="" class="categories__item"
+									<a href="#articles" class="categories__item _scroll"
 										><svg
 											width="20"
 											height="20"
@@ -387,11 +404,11 @@
 <div class="container">
 	<aside class="categories">
 		<div class="categories__content">
-			<div class="categories__body">
+			<div class="categories__body _scroll">
 				<h3 class="categories__title">Категории</h3>
 				<nav class="categories__nav">
 					<ul class="categories__list">
-						<a href="" class="categories__item">
+						<a href="#shops" class="categories__item _scroll">
 							<svg
 								width="20"
 								height="20"
@@ -415,7 +432,7 @@
 							</svg>
 							<span>Магазины</span>
 						</a>
-						<a href="" class="categories__item">
+						<a href="#farms" class="categories__item _scroll">
 							<svg
 								width="20"
 								height="20"
@@ -431,7 +448,7 @@
 
 							<span>Фермы</span>
 						</a>
-						<a href="" class="categories__item">
+						<a href="#equipment" class="categories__item _scroll">
 							<svg
 								width="20"
 								height="20"
@@ -454,7 +471,7 @@
 
 							<span>Оборудование</span>
 						</a>
-						<a href="" class="categories__item"
+						<a href="#articles" class="categories__item _scroll"
 							><svg
 								width="20"
 								height="20"
@@ -897,7 +914,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="near-stores">
+		<section class="near-stores" id="shops">
 			<div class="near-stores__content">
 				<div class="near-stores__title-top">
 					<h2 class="near-stores__title title-main">Магазины рядом</h2>
@@ -1531,7 +1548,7 @@
 				</div> -->
 			</div>
 		</section>
-		<section class="farms">
+		<section class="farms" id="farms">
 			<div class="farms__content">
 				<div class="farms__title-top">
 					<h2 class="farms__title title-main">Фермы</h2>
@@ -1677,7 +1694,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="equipment">
+		<section class="equipment" id="equipment">
 			<div class="equipment__content">
 				<div class="equipment__title-top">
 					<h2 class="equipment__title title-main">Оборудования</h2>
@@ -2003,7 +2020,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="articles">
+		<section class="articles" id="articles">
 			<div class="articles__content">
 				<div class="articles__title-top">
 					<h2 class="articles__title title-main">Статьи</h2>
@@ -2198,7 +2215,7 @@
 			</div>
 		</section>
 	</main>
-	<section class="map">Map</section>
+	<section class="map" id="map">Map</section>
 </div>
 
  <footer class="footer">

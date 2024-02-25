@@ -2137,6 +2137,10 @@ body::before {
 .form-admin-shop textarea {
   margin-top: 8px;
 }
+.form-admin-shop input._no-m,
+.form-admin-shop textarea._no-m {
+  margin-top: 0;
+}
 .form-admin-shop__section._form {
   max-width: 680px;
 }
@@ -3034,6 +3038,7 @@ body::before {
   display: flex;
   gap: 16px;
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 40px;
 }
 @media (max-width: 767.98px) {
