@@ -2583,6 +2583,11 @@ body::before {
     margin-top: 8px;
 }
 
+.form-admin-shop input._no-m,
+.form-admin-shop textarea._no-m {
+    margin-top: 0;
+}
+
 .form-admin-shop__section._form {
     max-width: 680px;
 }
@@ -3785,6 +3790,8 @@ body::before {
     gap: 16px;
     -ms-flex-align: center;
     align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     margin-bottom: 40px;
 }
 
