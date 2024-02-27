@@ -893,6 +893,9 @@ input[type=radio] {
   background-color: #fff;
   border: 1px solid transparent;
   transition: 0.25s ease-in-out all;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
 }
 @media (any-hover: hover) {
   .input_white:hover {
@@ -1174,7 +1177,7 @@ input[type=checkbox].custom-checkbox.filters-btn__checkbox + label svg {
 input[type=checkbox].custom-checkbox.filters-btn__checkbox + label svg path {
   fill: none;
   stroke: #000;
-  stroke-width: 4px;
+  stroke-width: 7px;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-dasharray: 100;
@@ -2073,7 +2076,7 @@ body::before {
   }
 }
 .admin-shop__input-hourses {
-  width: 118px;
+  width: 125px;
 }
 
 .form-admin-shop {
@@ -2186,6 +2189,7 @@ body::before {
   border: none;
   resize: none;
   color: #000;
+  border: 1px solid transparent;
 }
 .form-admin-shop__textarea::placeholder {
   font-size: 16px;
@@ -2204,6 +2208,9 @@ body::before {
   .form-admin-shop__textarea:hover::placeholder {
     color: #000;
   }
+}
+.form-admin-shop__textarea:focus {
+  border: 1px solid #000;
 }
 .form-admin-shop__hours-item {
   display: flex;
