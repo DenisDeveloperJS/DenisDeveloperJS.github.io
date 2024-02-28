@@ -2320,6 +2320,12 @@ body::after {
 .admin-shop__input-hourses {
   width: 125px;
 }
+@media (max-width: 767.98px) {
+  .admin-shop__input-hourses {
+    width: 110px;
+    padding: 14px 14px;
+  }
+}
 
 .form-admin-shop {
   display: flex;
