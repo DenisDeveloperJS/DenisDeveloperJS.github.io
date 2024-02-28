@@ -284,7 +284,7 @@
 					</ul>
 				</nav>
 			</div>
-			<button class="btn btn_green categories__add-to-my-products">
+			<a href="admin-shop.html" class="btn btn_green categories__add-to-shop">
 				<svg
 					width="21"
 					height="20"
@@ -299,11 +299,11 @@
 						fill="white"
 					/>
 				</svg>
-				<span>Add your my-products</span>
-			</button>
+				<span>Add your shop</span>
+			</a>
 		</div>
 	</aside>
-	<main class="main _no-map">
+	<main class="main _no-map main-myproducts">
 		<section class="my-products">
 			<div class="my-products__content">
 				<div class="my-products__top">
@@ -442,7 +442,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="header__right _mob">
+					<div class="header__right _mob _notop">
 						<div class="header__languages languages">
 							<div class="languages__content">
 								<div class="languages__button">
@@ -556,7 +556,7 @@
 												</svg>
 												<span>Магазины</span>
 											</a>
-											<a href="index.html" class="categories__item _link">
+											<a href="shops.html" class="categories__item _link">
 												<svg
 													width="20"
 													height="20"
@@ -572,7 +572,7 @@
 
 												<span>Фермы</span>
 											</a>
-											<a href="index.html" class="categories__item _link">
+											<a href="shops.html" class="categories__item _link">
 												<svg
 													width="20"
 													height="20"
@@ -595,7 +595,7 @@
 
 												<span>Оборудование</span>
 											</a>
-											<a href="index.html" class="categories__item _link"
+											<a href="shops.html" class="categories__item _link"
 												><svg
 													width="20"
 													height="20"
@@ -698,109 +698,111 @@
 										/>
 									</svg>
 								</div>
-								<div class="filters-btn__content">
-									<div class="filters-btn__category">
-										<div class="filters-btn__name">По расстоянию</div>
-										<div class="filters-btn__list">
-											<div class="filters-btn__item">
-												<div class="filters-btn__category-name">Text</div>
-												<input
-													type="checkbox"
-													id="test"
-													class="custom-checkbox filters-btn__checkbox"
-												/>
-												<label for="test">
-													<span></span>
-													<svg viewBox="0,0,50,50">
-														<path d="M5 30 L 20 45 L 45 5"></path>
-													</svg>
-												</label>
-											</div>
-											<div class="filters-btn__item">
-												<div class="filters-btn__category-name">Text</div>
-												<input
-													type="checkbox"
-													id="test"
-													class="custom-checkbox filters-btn__checkbox"
-												/>
-												<label for="test">
-													<span></span>
-													<svg viewBox="0,0,50,50">
-														<path d="M5 30 L 20 45 L 45 5"></path>
-													</svg>
-												</label>
-											</div>
-											<div class="filters-btn__item">
-												<div class="filters-btn__category-name">Text</div>
-												<input
-													type="checkbox"
-													id="test"
-													class="custom-checkbox filters-btn__checkbox"
-												/>
-												<label for="test">
-													<span></span>
-													<svg viewBox="0,0,50,50">
-														<path d="M5 30 L 20 45 L 45 5"></path>
-													</svg>
-												</label>
-											</div>
-										</div>
-									</div>
-									<div class="filters-btn__category">
-										<div class="filters-btn__name">По расстоянию</div>
-										<div class="filters-btn__list">
-											<div class="filters-btn__item">
-												<div class="filters-btn__category-name">Text</div>
-												<input
-													type="checkbox"
-													id="test"
-													class="custom-checkbox filters-btn__checkbox"
-												/>
-												<label for="test">
-													<span></span>
-													<svg viewBox="0,0,50,50">
-														<path d="M5 30 L 20 45 L 45 5"></path>
-													</svg>
-												</label>
-											</div>
-											<div class="filters-btn__item">
-												<div class="filters-btn__category-name">Text</div>
-												<input
-													type="checkbox"
-													id="test"
-													class="custom-checkbox filters-btn__checkbox"
-												/>
-												<label for="test">
-													<span></span>
-													<svg viewBox="0,0,50,50">
-														<path d="M5 30 L 20 45 L 45 5"></path>
-													</svg>
-												</label>
-											</div>
-											<div class="filters-btn__item">
-												<div class="filters-btn__category-name">Text</div>
-												<input
-													type="checkbox"
-													id="test"
-													class="custom-checkbox filters-btn__checkbox"
-												/>
-												<label for="test">
-													<span></span>
-													<svg viewBox="0,0,50,50">
-														<path d="M5 30 L 20 45 L 45 5"></path>
-													</svg>
-												</label>
+								<div class="filters-btn__content _t15">
+									<div class="filters-btn__body">
+										<div class="filters-btn__category">
+											<div class="filters-btn__name">По расстоянию</div>
+											<div class="filters-btn__list">
+												<div class="filters-btn__item">
+													<div class="filters-btn__category-name">Text</div>
+													<input
+														type="checkbox"
+														id="test"
+														class="custom-checkbox filters-btn__checkbox"
+													/>
+													<label for="test">
+														<span></span>
+														<svg viewBox="0,0,50,50">
+															<path d="M5 30 L 20 45 L 45 5"></path>
+														</svg>
+													</label>
+												</div>
+												<div class="filters-btn__item">
+													<div class="filters-btn__category-name">Text</div>
+													<input
+														type="checkbox"
+														id="test"
+														class="custom-checkbox filters-btn__checkbox"
+													/>
+													<label for="test">
+														<span></span>
+														<svg viewBox="0,0,50,50">
+															<path d="M5 30 L 20 45 L 45 5"></path>
+														</svg>
+													</label>
+												</div>
+												<div class="filters-btn__item">
+													<div class="filters-btn__category-name">Text</div>
+													<input
+														type="checkbox"
+														id="test"
+														class="custom-checkbox filters-btn__checkbox"
+													/>
+													<label for="test">
+														<span></span>
+														<svg viewBox="0,0,50,50">
+															<path d="M5 30 L 20 45 L 45 5"></path>
+														</svg>
+													</label>
+												</div>
 											</div>
 										</div>
+										<div class="filters-btn__category">
+											<div class="filters-btn__name">По расстоянию</div>
+											<div class="filters-btn__list">
+												<div class="filters-btn__item">
+													<div class="filters-btn__category-name">Text</div>
+													<input
+														type="checkbox"
+														id="test"
+														class="custom-checkbox filters-btn__checkbox"
+													/>
+													<label for="test">
+														<span></span>
+														<svg viewBox="0,0,50,50">
+															<path d="M5 30 L 20 45 L 45 5"></path>
+														</svg>
+													</label>
+												</div>
+												<div class="filters-btn__item">
+													<div class="filters-btn__category-name">Text</div>
+													<input
+														type="checkbox"
+														id="test"
+														class="custom-checkbox filters-btn__checkbox"
+													/>
+													<label for="test">
+														<span></span>
+														<svg viewBox="0,0,50,50">
+															<path d="M5 30 L 20 45 L 45 5"></path>
+														</svg>
+													</label>
+												</div>
+												<div class="filters-btn__item">
+													<div class="filters-btn__category-name">Text</div>
+													<input
+														type="checkbox"
+														id="test"
+														class="custom-checkbox filters-btn__checkbox"
+													/>
+													<label for="test">
+														<span></span>
+														<svg viewBox="0,0,50,50">
+															<path d="M5 30 L 20 45 L 45 5"></path>
+														</svg>
+													</label>
+												</div>
+											</div>
+										</div>
+										<button class="filters-btn__btn-apply btn btn_green">
+											Apply
+										</button>
 									</div>
-									<button class="filters-btn__btn-apply btn btn_green">
-										Apply
-									</button>
 								</div>
 							</div>
 						</div>
 						<div class="section__body _sm">
-							<a href="#" class="section__item">
+							<a href="shop.html" class="section__item">
 								<picture>
 									<source
 										srcset="./assets/images/2h-media-9oIym89cYIc-unsplash.avif"
@@ -835,7 +837,7 @@
 									</div>
 								</div>
 							</a>
-							<a href="#" class="section__item">
+							<a href="shop.html" class="section__item">
 								<picture>
 									<source
 										srcset="./assets/images/2h-media-9oIym89cYIc-unsplash.avif"
@@ -870,7 +872,7 @@
 									</div>
 								</div>
 							</a>
-							<a href="#" class="section__item">
+							<a href="shop.html" class="section__item">
 								<picture>
 									<source
 										srcset="./assets/images/2h-media-9oIym89cYIc-unsplash.avif"
@@ -905,7 +907,7 @@
 									</div>
 								</div>
 							</a>
-							<a href="#" class="section__item">
+							<a href="shop.html" class="section__item">
 								<picture>
 									<source
 										srcset="./assets/images/2h-media-9oIym89cYIc-unsplash.avif"
@@ -940,7 +942,7 @@
 									</div>
 								</div>
 							</a>
-							<a href="#" class="section__item">
+							<a href="shop.html" class="section__item">
 								<picture>
 									<source
 										srcset="./assets/images/2h-media-9oIym89cYIc-unsplash.avif"
