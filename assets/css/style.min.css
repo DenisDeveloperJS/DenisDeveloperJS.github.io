@@ -1118,13 +1118,13 @@ input[type=radio] {
   justify-content: center;
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
-  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.5019607843);
   opacity: 0;
-  transform: translateY(-100%);
+  transform: translateY(100%);
   transition: 0.4s ease-in-out all;
 }
 @media (min-width: 767.98px) {
@@ -1446,7 +1446,7 @@ input[type=checkbox].custom-checkbox + label span {
 }
 .age-modal._active {
   display: block;
-  z-index: 1100;
+  z-index: 10100;
 }
 .age-modal__body {
   display: flex;
@@ -1461,6 +1461,26 @@ input[type=checkbox].custom-checkbox + label span {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+.age-modal__content-no {
+  position: absolute;
+  bottom: -160px;
+  padding: 24px 44px;
+  border-radius: 16px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+}
+.age-modal__content-no._active {
+  display: block;
+}
+@media (max-width: 767.98px) {
+  .age-modal__content-no {
+    display: none;
+  }
 }
 .age-modal__name {
   font-size: 20px;
@@ -1485,6 +1505,26 @@ input[type=checkbox].custom-checkbox + label span {
   align-items: center;
   gap: 16px;
 }
+@media (max-width: 767.98px) {
+  .age-modal__buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.age-modal__no-btn {
+  width: 120px;
+}
+@media (max-width: 767.98px) {
+  .age-modal__no-btn {
+    width: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .age-modal__yes-btn {
+    width: 100%;
+  }
+}
+
 *,
 *:before,
 *:after {
@@ -1596,6 +1636,9 @@ body::after {
 }
 .main._no-map {
   margin-right: 0px;
+}
+.main._no-m {
+  margin: 0;
 }
 @media (max-width: 1300px) {
   .main {
@@ -2530,9 +2573,15 @@ body::after {
   top: 0;
 }
 @media (max-width: 1300px) {
-  .map {
+  .map-desc {
     display: none;
   }
+}
+.map-map-page {
+  height: 85vh;
+  width: 100%;
+  background-color: #ccc;
+  border-radius: 16px;
 }
 .map_shops {
   display: none;
@@ -3764,16 +3813,27 @@ body::after {
   overflow: hidden;
   margin-bottom: 24px;
 }
+@media (max-width: 767.98px) {
+  .reviews__reviews {
+    margin-bottom: 16px;
+  }
+}
 .reviews__item {
   padding: 24px;
   background-color: #ffffff;
   border-radius: 24px;
-  height: auto;
+  height: 132px;
 }
 @media (max-width: 767.98px) {
   .reviews__item {
     width: 272px;
+    height: 100px;
+    padding: 16px;
+    border-radius: 16px;
   }
+}
+.reviews__item-date {
+  display: none;
 }
 .reviews__item-top {
   display: flex;
@@ -3781,6 +3841,11 @@ body::after {
   justify-content: space-between;
   margin-bottom: 24px;
   width: 100%;
+}
+@media (max-width: 767.98px) {
+  .reviews__item-top {
+    margin-bottom: 8px;
+  }
 }
 .reviews__item-name {
   font-size: 20px;
@@ -3797,6 +3862,11 @@ body::after {
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
+  margin: 0; /* Убираем внешний отступ */
+  -webkit-line-clamp: 2; /* Число отображаемых строк */
+  display: -webkit-box; /* Включаем флексбоксы */
+  -webkit-box-orient: vertical; /* Вертикальная ориентация */
+  overflow: hidden; /* Обрезаем всё за пределами блока */
 }
 .slider-reviews {
   position: relative;
@@ -3845,6 +3915,106 @@ body::after {
   line-height: 20px;
   margin-bottom: 24px;
 }
+.reviews-modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5019607843);
+  z-index: -1;
+  opacity: 0;
+  transform: translateY(-10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.25s ease-in-out all;
+}
+@media (max-width: 767.98px) {
+  .reviews-modal {
+    display: none;
+  }
+}
+.reviews-modal._active {
+  opacity: 1;
+  z-index: 1100;
+  transform: translateY(0px);
+}
+.reviews-modal__body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.reviews-modal__content {
+  padding: 24px;
+  border-radius: 16px;
+  background: #ffffff;
+  width: 620px;
+  margin: 0 auto;
+  position: relative;
+}
+.reviews-modal__left-btn, .reviews-modal__right-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.reviews-modal__left-btn {
+  left: -64px;
+}
+.reviews-modal__right-btn {
+  right: -64px;
+}
+.reviews-modal__close-svg {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  cursor: pointer;
+  transition: 0.25s ease-in-out all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (any-hover: hover) {
+  .reviews-modal__close-svg:hover {
+    transform: rotate(180deg);
+  }
+}
+.reviews-modal__top {
+  display: flex;
+  margin-bottom: 16px;
+}
+.reviews-modal__name {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 20px;
+  margin-right: 8px;
+}
+.reviews-modal__date {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #6c6b6b;
+}
+.reviews-modal__stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+.reviews-modal__text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 32px;
+}
+.reviews-modal__link {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
 .my-products__top {
   display: flex;
   justify-content: space-between;
@@ -4114,4 +4284,152 @@ body::after {
 }
 .hover-shop-item__text::-webkit-scrollbar {
   width: 0px;
+}
+
+.reviews-page {
+  margin-top: 16px;
+}
+.reviews-page__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.reviews-page__item {
+  background: #ffffff;
+  width: 100%;
+  height: auto;
+  padding: 24px;
+  border-radius: 16px;
+}
+.reviews-page__top {
+  display: flex;
+  margin-bottom: 16px;
+}
+.reviews-page__name {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 20px;
+  margin-right: 8px;
+}
+.reviews-page__date {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #6c6b6b;
+}
+.reviews-page__stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+.reviews-page__text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.reviews-page__button {
+  width: 90%;
+  position: fixed;
+  bottom: 32px;
+}
+
+.map-page {
+  margin-top: 16px;
+}
+.map-page__content {
+  height: 85vh;
+}
+
+.map-modal {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.5019607843);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: 0.4s ease-in-out all;
+}
+.map-modal._active {
+  transform: translateY(0%);
+  z-index: 10110;
+  opacity: 1;
+}
+.map-modal__body {
+  background: #fff;
+  padding: 16px;
+  padding-bottom: 32px;
+  border-radius: 24px 24px 0px 0px;
+  width: 100%;
+  position: relative;
+}
+.map-modal__close-svg {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+.map-modal__name {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 20px;
+}
+.map-modal__address {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+.map-modal__rating {
+  margin-bottom: 16px;
+  margin-top: 16px;
+  border: 1px solid #bdbdbd;
+  display: inline-flex;
+  align-items: center;
+  padding: 12px;
+}
+.map-modal__rating svg {
+  width: 16px;
+  height: 16px;
+}
+.map-modal__rating span {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.map-modal__text {
+  -webkit-line-clamp: 2; /* Число отображаемых строк */
+  display: -webkit-box; /* Включаем флексбоксы */
+  -webkit-box-orient: vertical; /* Вертикальная ориентация */
+  overflow: hidden; /* Обрезаем всё за пределами блока */
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.map-modal__gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.map-modal__gallery-item {
+  width: 48%;
+}
+.map-modal__gallery-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.map-modal__btn {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
 }
