@@ -2604,10 +2604,12 @@ body::after {
   height: 100%;
 }
 .map__buttons-zoom {
-  position: relative;
+  position: absolute;
+  z-index: 1000;
   top: 50%;
   right: 8px;
   display: flex;
+  width: 48px;
   flex-direction: column;
   align-items: flex-end;
   gap: 16px;
@@ -2615,6 +2617,7 @@ body::after {
 }
 .map__locate-me {
   position: absolute;
+  z-index: 1000;
   bottom: 32px;
   right: 8px;
 }
@@ -2627,6 +2630,10 @@ div.gm-bundled-control div.gmnoprint {
 
 .leaflet-control-zoom.leaflet-bar.leaflet-control {
   display: none !important;
+}
+
+.leaflet-marker-icon {
+  z-index: 2000 !important;
 }
 
 .open-hours-mob__content {
