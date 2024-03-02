@@ -1694,7 +1694,7 @@ input[type=checkbox].custom-checkbox + label span {
 .age-modal {
     width: 100%;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.5019607843);
@@ -1800,6 +1800,10 @@ input[type=checkbox].custom-checkbox + label span {
     .age-modal__no-btn {
         width: 100%;
     }
+}
+
+.age-modal__yes-btn {
+    width: 120px;
 }
 
 @media (max-width: 767.98px) {
@@ -3175,6 +3179,7 @@ body::after {
     position: absolute;
     right: 0;
     top: 0;
+    z-index: 100;
 }
 
 @media (max-width: 1300px) {
@@ -3202,6 +3207,50 @@ body::after {
         width: 100%;
         height: 408px;
     }
+}
+
+.map__content {
+    position: relative;
+    z-index: 1000;
+    height: 100%;
+}
+
+.map__buttons-zoom {
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    right: 8px;
+    display: -ms-flexbox;
+    display: flex;
+    width: 48px;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    gap: 16px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.map__locate-me {
+    position: absolute;
+    z-index: 1000;
+    bottom: 32px;
+    right: 8px;
+}
+
+div#map a,
+div#map button,
+div.gm-bundled-control div.gmnoprint {
+    display: none !important;
+}
+
+.leaflet-control-zoom.leaflet-bar.leaflet-control {
+    display: none !important;
+}
+
+.leaflet-marker-icon {
+    z-index: 2000 !important;
 }
 
 .open-hours-mob__content {
@@ -5434,6 +5483,9 @@ body::after {
     width: 90%;
     position: fixed;
     bottom: 32px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
 }
 
 .map-page {
@@ -5453,7 +5505,7 @@ body::after {
     justify-content: center;
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: -1;
@@ -5541,16 +5593,19 @@ body::after {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    gap: 4px;
     margin-bottom: 16px;
 }
 
 .map-modal__gallery-item {
     width: 48%;
+    border-radius: 16px;
+    overflow: hidden;
 }
 
 .map-modal__gallery-item img {
     width: 100%;
-    height: auto;
+    height: 140px;
     -o-object-fit: cover;
     object-fit: cover;
 }
