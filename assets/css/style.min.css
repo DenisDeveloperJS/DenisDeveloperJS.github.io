@@ -2582,6 +2582,7 @@ body::after {
   }
 }
 .map-map-page {
+  pointer-events: none !important;
   height: 85vh;
   width: 100%;
   background-color: #ccc;
