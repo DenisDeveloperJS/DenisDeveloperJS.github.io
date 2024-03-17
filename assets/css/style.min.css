@@ -855,6 +855,13 @@ input[type=radio] {
   position: absolute;
   bottom: -20px;
 }
+.container-input .input__icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(20%);
+  cursor: pointer;
+}
 
 .input {
   padding: 14px 24px;
@@ -1957,6 +1964,17 @@ body::after {
   .header__btn-auth:hover {
     background-color: #292929;
   }
+}
+.header__btn-auth._hide {
+  display: none;
+}
+.header__btn-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__btn-profile._hide {
+  display: none;
 }
 
 .footer {
@@ -4479,4 +4497,51 @@ div.gm-bundled-control div.gmnoprint {
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
+}
+
+.profile__title {
+  padding: 12px;
+  padding-left: 0;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 24px;
+}
+@media (max-width: 767.98px) {
+  .profile__title {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 20px;
+  }
+}
+.profile__top {
+  margin-bottom: 20px;
+}
+.profile__form label {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.profile__form input {
+  margin-top: 8px;
+}
+.profile__form-content {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 328px;
+  width: 100%;
+}
+@media (max-width: 767.98px) {
+  .profile__form-content {
+    max-width: 100%;
+  }
+}
+.profile__btn-form {
+  width: 200px;
+}
+@media (max-width: 767.98px) {
+  .profile__btn-form {
+    width: 100%;
+  }
 }
