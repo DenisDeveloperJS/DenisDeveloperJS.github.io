@@ -1876,6 +1876,10 @@ body::after {
     margin-top: -396px;
 }
 
+.main-3elemAside {
+    margin-top: -334px;
+}
+
 .main-index {
     position: relative;
 }
@@ -2495,11 +2499,38 @@ body::after {
 
 .languages__body {
     display: none;
+    width: 144px;
 }
 
 .languages__body._active {
     display: block;
     position: absolute;
+    top: 60px;
+    z-index: 1000;
+    box-shadow: 0px 4px 26.1000003815px 0px rgba(0, 0, 0, 0.1019607843);
+    background: #fff;
+    border-radius: 8px;
+}
+
+.languages__item {
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    transition: 0.25s ease-in-out all;
+    border-radius: 8px;
+    transition: 0.25s ease-in-out all;
+    cursor: pointer;
+}
+
+@media (any-hover: hover) {
+    .languages__item:hover {
+        background: #e1f3da;
+    }
+}
+
+.languages__item._active {
+    background: #e1f3da;
 }
 
 .languages__button {
@@ -2507,6 +2538,10 @@ body::after {
     border: 1px solid #bdbdbd;
     border-radius: 16px;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
 }
 
 .categories {
@@ -5692,4 +5727,10 @@ div.gm-bundled-control div.gmnoprint {
 
 .profile__btn-form {
     width: 200px;
+}
+
+@media (max-width: 767.98px) {
+    .profile__btn-form {
+        width: 100%;
+    }
 }
