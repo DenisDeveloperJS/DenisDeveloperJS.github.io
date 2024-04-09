@@ -162,10 +162,16 @@ body {
 }
 
 .hero2 {
-	padding-top: 280px;
+	padding-top: 380px;
 	max-width: 1200px;
 	margin: 0 auto;
 	transition: 0.25s ease-in-out all;
+}
+
+@media (max-width: 479.98px) {
+	.hero2 {
+		padding-top: 40vh;
+	}
 }
 
 .hero2__section {
