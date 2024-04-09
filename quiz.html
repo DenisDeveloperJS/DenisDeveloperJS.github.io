@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Опросник</title>
+
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/fonts.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
+	<body>
+		<div class="bg-40-container">
+			<img class="hero2__background bg-40" src="img/bg2.jpg" />
+		</div>
+		<div id="bg-container" style="display: none">
+			<div id="background"></div>
+		</div>
+
+		<div class="container">
+			<section class="hero2">
+				<div class="hero2__content">
+					<div class="hero2__section">
+						<div class="hero2__title">This is your passive income</div>
+						<p class="hero2__text">
+							GPT has launched the world's only LEGAL passive income company. We
+							have been creating this platform for more than 7 years, we have
+							thoroughly tested and checked it for tens of thousands of errors
+							during training, we have put all possible indicators of our
+							scientists so that it works fully automatically and brings you
+							passive income, and today we are pleased to present you the first
+							in the world profitable automated work platform.
+						</p>
+					</div>
+					<div class="hero2__section">
+						<div class="hero2__title">"GPT TRADING"</div>
+						<p class="hero2__text">
+							To gain access, you need to complete a simple test, based on which
+							we will contact you and give you access to passive income of
+							$4,000 per week. You don't need to invest tens or even thousands
+							of dollars, the platform is set up so that your minimum deposit
+							will generate income for you.<br /><br />
+							The minimum deposit is equivalent to $250 and in just 48 hours you
+							will see your income grow! We really hope to change someone's life
+							with our latest development!
+						</p>
+					</div>
+				</div>
+				<div class="hero2__bottom">
+					<button class="btn hero2__btn btn_summary" onclick="startSurvey()">
+						START
+					</button>
+				</div>
+			</section>
+
+			<section class="quiz">
+				<div class="quiz__title"></div>
+			</section>
+
+			<div id="survey-page" style="display: none">
+				<div id="question-container">
+					<h2 id="question"></h2>
+					<div id="options"></div>
+					<button class="btn btn_quiz" onclick="nextQuestion()">NEXT</button>
+				</div>
+			</div>
+		</div>
+
+		<script defer src="script.js"></script>
+	</body>
+</html>

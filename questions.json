@@ -1,0 +1,40 @@
+{
+	"questions": [
+		{
+			"text": "What is your gender?",
+			"type": "single",
+			"options": ["Male", "Female"],
+			"url": "01.png"
+		},
+		{
+			"text": "How old are you?",
+			"type": "single",
+			"options": ["18-25", "25-35", "35-45", "45-65"],
+			"url": "02.jpg"
+		},
+		{
+			"text": "Would you like to make money with investments?",
+			"type": "single",
+			"options": ["Yes", "No, I don't think about the future"],
+			"url": "03.jpg"
+		},
+		{
+			"text": "Do you know that every can earn with GPT TRADING new platform?",
+			"type": "single",
+			"options": ["Yes", "No, I didn't. But I would like to know how"],
+			"url": "04.jpg"
+		},
+		{
+			"text": "How much would you like to earn from investing?",
+			"type": "single",
+			"options": ["2 000 $", "6 000 $", "12 000 $", "Other"],
+			"url": "05.jpg"
+		},
+		{
+			"text": "According to statistics, participants' success is 87.3% higher when working with a personal manager. Knowing this information, how would you like to work??",
+			"type": "single",
+			"options": ["With the help of an experienced personal manager", "Singly"],
+			"url": "06.jpg"
+		}
+	]
+}
