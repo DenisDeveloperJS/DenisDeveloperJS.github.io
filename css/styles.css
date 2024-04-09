@@ -314,7 +314,7 @@ body {
 
 #question {
 	text-align: center;
-	font-size: 32px;
+	font-size: 23px;
 	margin-bottom: 40px;
 	max-width: 800px;
 	line-height: 1.3;
@@ -333,7 +333,7 @@ body {
 
 .option-button {
 	display: block;
-	padding: 15px 12px;
+	padding: 10px 8px;
 	color: #fff;
 	line-height: 12px;
 	letter-spacing: 1px;
@@ -355,10 +355,9 @@ body {
 	transition: 0.25s ease-in-out all;
 }
 .option-button:hover {
-	transform: scale(1.04);
+	transform: scale(1.02);
 }
 .option-button.selected {
 	background: linear-gradient(180deg, #25ab89 0%, #0d3e32 100%);
-	font-size: 18px;
 	transform: scale(1.04);
 }
