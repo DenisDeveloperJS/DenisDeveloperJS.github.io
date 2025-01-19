@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+			var fired = false;
+		
+			window.addEventListener("scroll", () => {
+				if (fired === false) {
+					fired = true;
+		
+					setTimeout(() => {
+						(function (m, e, t, r, i, k, a) {
+							m[i] =
+								m[i] ||
+								function () {
+									(m[i].a = m[i].a || []).push(arguments);
+								};
+							m[i].l = 1 * new Date();
+							for (var j = 0; j < document.scripts.length; j++) {
+								if (document.scripts[j].src === r) {
+									return;
+								}
+							}
+							(k = e.createElement(t)),
+								(a = e.getElementsByTagName(t)[0]),
+								(k.async = 1),
+								(k.src = r),
+								a.parentNode.insertBefore(k, a);
+						})(
+							window,
+							document,
+							"script",
+							"https://mc.yandex.ru/metrika/tag.js",
+							"ym"
+						);
+		
+						ym(90201541, "init", {
+							clickmap: true,
+							trackLinks: true,
+							accurateTrackBounce: true,
+							webvisor: true,
+						});
+					}, 1000);
+				}
+			});
+		</script>
+		<noscript
+			><div>
+				<img
+					src="https://mc.yandex.ru/watch/90201541"
+					style="position: absolute; left: -9999px"
+					alt=""
+				/></div
+		></noscript>
+		<!-- /Yandex.Metrika counter -->
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="assets/css/style.min.css?v2" />
+		
+		<!-- Useful meta tags -->
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<meta name="robots" content="index, follow" />
+		<meta name="google" content="notranslate" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta
+			name="description"
+			content="TUD x PUNKMETENDER — this is the union of two strong life philosophies embodied in a tangible collectible art piece."
+		/>
+		
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="./assets/images/favicon-og/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-og/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="./assets/images/favicon-og/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="./assets/images/favicon-og/site.webmanifest" />
+		<link
+			rel="mask-icon"
+			href="./assets/images/favicon-og/safari-pinned-tab.svg"
+			color="#f9c037"
+		/>
+		<meta name="apple-mobile-web-app-title" content="The Ugly Duck" />
+		<meta name="application-name" content="The Ugly Duck" />
+		<meta name="msapplication-TileColor" content="#02060e" />
+		<meta name="theme-color" content="#02060e" />
+		
+		<meta property="og:image" content="./assets/images/favicon-og/og-image.jpg" />
+		<meta property="og:title" content="The Ugly Duck" />
+		<meta
+			property="og:description"
+			content="Hello, I’m TUD. I was made to create a new reality. Would you join?"
+		/>
+		
+		<title>The Ugly Duck</title>
+	</head>
+	<body id="app">
+		<header class="header _shop">
+	<div class="header__content">
+		<nav class="header__nav nav">
+			<ul class="nav__list">
+				<li class="nav__item">
+					<a href="index.html" class="nav__link">LIVE NOW</a>
+				</li>
+				<li class="nav__item">
+					<a href="drop-calendar.html" class="nav__link">Drop calendar</a>
+				</li>
+				<li class="nav__item">
+					<a href="shop.html" class="nav__link _active">Shop</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+ 
+<main class="main _ordering _container">
+	<section class="ordering">
+		<div class="ordering__content">
+			<div class="ordering__left">
+				<div id="ordering-tabs" class="ordering__tabs">
+					<div>
+						<div class="tabs-shipping">SHIPPING</div>
+						<div class="tabs-payment">PAYMENT</div>
+					</div>
+					<div>
+						<div class="shipping">
+							<form
+								novalidate
+								class="shipping__content"
+								method="POST"
+								id="ordering"
+							>
+								<div class="main-form__wrapper-input shipping__name">
+									<input
+										type="text"
+										name="name"
+										id="name"
+										class="shipping__input input__input input_shipping _shipping"
+										placeholder="Full name"
+										required
+										autocomplete="off"
+										value=""
+									/>
+									<span class="main-form__message"
+										>*full name is a required field</span
+									>
+								</div>
+								<div class="main-form__wrapper-input shipping__email">
+									<input
+										type="email"
+										name="email"
+										id="email"
+										class="shipping__input input__input input_shipping _shipping _email"
+										placeholder="email"
+										required
+										autocomplete="off"
+										value=""
+									/>
+									<span class="main-form__message"
+										>*email address is a required field</span
+									>
+								</div>
+								<div class="shipping__policy-privacy">
+									<input
+										type="checkbox"
+										id="policyPrivacy"
+										name="policyPrivacy"
+										class="custom-checkbox shipping__policy"
+										required
+										checked
+									/>
+									<label for="policyPrivacy">
+										<span class="policy-checkbox">
+											Click here so we know you agree with our
+											<a href="./policy-privacy.pdf">Privacy Policy</a></span
+										>
+										<svg viewBox="0,0,50,50">
+											<path d="M5 30 L 20 45 L 45 5"></path>
+										</svg>
+									</label>
+								</div>
+								<div class="main-form__wrapper-input shipping__country">
+									<input
+										type="text"
+										name="country"
+										id="country"
+										class="shipping__input input__input input_shipping _shipping"
+										placeholder="country"
+										required
+										autocomplete="off"
+										value=""
+									/>
+									<span class="main-form__message"
+										>*country is a required field</span
+									>
+								</div>
+								<div class="shipping__address">
+									<div class="main-form__wrapper-input shipping__country">
+										<input
+											type="text"
+											name="address"
+											id="address"
+											class="shipping__input input__input input_shipping _shipping"
+											placeholder="Street address"
+											required
+											autocomplete="off"
+											value=""
+										/>
+										<span class="main-form__message"
+											>*street address is a required field</span
+										>
+									</div>
+								</div>
+								<div class="shipping__bottom">
+									<div class="shipping__top">
+										<div class="main-form__wrapper-input">
+											<input
+												type="text"
+												name="city"
+												id="city"
+												class="shipping__input input__input input_shipping _shipping"
+												placeholder="City"
+												required
+												autocomplete="off"
+												value=""
+											/>
+											<span class="main-form__message"
+												>*city is a required field</span
+											>
+										</div>
+										<div class="main-form__wrapper-input">
+											<input
+												type="text"
+												name="state"
+												id="state"
+												class="shipping__input input__input input_shipping _shipping"
+												placeholder="Optional"
+												autocomplete="off"
+												value=""
+											/>
+										</div>
+									</div>
+									<div class="shipping__bottom-bottom">
+										<div class="main-form__wrapper-input">
+											<input
+												type="text"
+												name="zipCode"
+												id="zip code"
+												class="shipping__input input__input input_shipping _shipping"
+												placeholder="Zip code / Postal"
+												required
+												autocomplete="off"
+												value=""
+											/>
+											<span class="main-form__message"
+												>*This is required field</span
+											>
+										</div>
+										<div class="main-form__wrapper-input">
+											<input
+												type="number"
+												name="phoneNumber"
+												id="number"
+												class="shipping__input input__input input_shipping _shipping"
+												placeholder="Phone number"
+												required
+												autocomplete="off"
+												numeric
+												inputmode="numeric"
+												digitOnly
+												oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');"
+											/>
+											<span class="main-form__message"
+												>*This is required field</span
+											>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="payment">
+							<div class="payment__content">
+								<h2 class="payment__title">CHOOSE PAYMENT OPTION</h2>
+								<div href="#" class="payment__body">
+									<div
+										class="payment__item payment__item-currency _first _mastercard _active"
+										data-currency="USD"
+									>
+										<h3 class="payment__type-payment">CARD<br />(ALL WORLD)</h3>
+
+										<img
+											loading="lazy"
+											src="./assets/images/eng_pay.svg"
+											class="payment__image"
+											alt="visa mastercard"
+										/>
+									</div>
+									<div
+										class="payment__item payment__item-currency _bycard"
+										data-currency="RUB"
+									>
+										<h3 class="payment__type-payment">
+											CARD<br />
+											(RU REGION)<br />
+										</h3>
+
+										<img
+											loading="lazy"
+											src="./assets/images/rus_pay.svg"
+											class="payment__image _card"
+											alt="credit card"
+										/>
+									</div>
+								</div>
+								<div class="payment__not-required">
+									*this field is required. please, select an option
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="order__right ordering__right">
+				<div class="order__top">
+					<div class="order__name">YOUR ORDER</div>
+					<div class="order__about">
+						<picture>
+							<img
+								loading="lazy"
+								src="./assets/images/shop/about-duck.jpg"
+								class="image order__picture"
+								alt="TUD X PUNK ME TENDER"
+							/>
+							<source
+								srcset="./assets/images/shop/about-duck.avif"
+								type="image/avif"
+							/>
+							<source
+								srcset="./assets/images/shop/about-duck.webp"
+								type="image/webp"
+							/>
+						</picture>
+						<div class="order__about-right">
+							<h1 class="order__title">
+								TUD X PUNKMETENDER <br />CO CREATE PROJECT
+							</h1>
+							<h2 class="order__size">SIZE L</h2>
+						</div>
+					</div>
+					<div class="order__description">
+						<div class="order__description-item">
+							<div class="order__description-name">subtotal</div>
+							<div class="order__description-value _price">$2 490</div>
+						</div>
+						<div class="order__description-item">
+							<div class="order__description-name _question">
+								shipping <span>?</span>
+							</div>
+							<div class="order__description-value">$0</div>
+						</div>
+					</div>
+					<div class="order__total">
+						<div class="order__total-name">Total:</div>
+						<div class="order__total-value">$2 490</div>
+					</div>
+				</div>
+				<div class="order__bottom">
+					<div class="order__description-item _timer">
+						<div class="order__description-name">
+							Time left to complete order
+						</div>
+						<div class="order__description-value _timer">Calculated</div>
+					</div>
+					<button
+						type="submit"
+						form="ordering"
+						class="btn btn_yellow order__button ordering__submit"
+					>
+						continue
+					</button>
+					<div class="order__contact-manager">CONTACT SUPPORT</div>
+					<div class="group-contact-manager">
+						<div class="group-contact-manager__content">
+							<a
+								target="_blank"
+								href="http://t.me/manager_tudtoy"
+								class="group-contact-manager__item"
+								><img src="./assets/images/shop/telegram.svg" alt="telegram"
+							/></a>
+
+							<a
+								target="_blank"
+								href="mailto:support@tudtoy.com"
+								class="group-contact-manager__item"
+								><img src="./assets/images/shop/email.svg" alt="email"
+							/></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+ <footer class="footer">
+	<div class="footer__content">
+		<div class="footer__top">
+			<div class="footer__top-left">
+				<h1 class="footer__title">support</h1>
+				<div class="footer__top-text">
+					If you have any questions,<br />
+					please message us
+				</div>
+				<a href="http://t.me/manager_tudtoy" class="footer__top-telegram"
+					>telegram</a
+				>
+				<a href="mailto:support@TUDTOY.com" class="footer__top-mail"
+					>support@TUDTOY.com</a
+				>
+			</div>
+			<div class="footer__top-right">
+				<h1 class="footer__title">Partnership</h1>
+				<div class="footer__top-text">
+					For partnership and ideas, <br />
+					contact us via email
+				</div>
+				<a href="mailto:MEDIA@TUDTOY.com" class="footer__top-mail _media"
+					>MEDIA@TUDTOY.com</a
+				>
+			</div>
+		</div>
+		<div class="footer__main">
+			<div class="footer__social">
+				<ul class="footer__social-body">
+					<li class="footer__social-item">
+						<a
+							target="_blank"
+							href="https://instagram.com/tudtoy"
+							class="footer__social-link"
+							>instagram</a
+						>
+					</li>
+					<li class="footer__social-item">
+						<a
+							target="_blank"
+							href="http://t.me/tudtoy"
+							class="footer__social-link"
+							>telegram</a
+						>
+					</li>
+					<li class="footer__social-item">
+						<a
+							target="_blank"
+							href="https://twitter.com/tudtoy"
+							class="footer__social-link"
+							>twitter</a
+						>
+					</li>
+				</ul>
+				<div class="footer__social-designby">
+					TUD TOY GIFTS TRADING CO. L.L.C
+					<br /><br />
+					UAE, Dubai, Al qusais 2, Shaikha Mhara Al Qusais BLDG, unit 164
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="footer__copyright">2023 Ⓒ‎ TUD, tud toy gifts trading</div>
+			<a
+				target="_blank"
+				href="./policy-privacy-2.pdf"
+				class="footer__policy-privacy"
+				>privacy policy</a
+			>
+			<div class="footer__bottom-payment">
+				<img src="./assets/images/shop/visa.png" alt="visa mastercard" />
+			</div>
+			<a
+				target="_blank"
+				href="./TUD_General_User_Agreement-EN.pdf"
+				class="footer__license"
+				>License Agreement</a
+			>
+
+			<div class="footer__all-rights">All rights reserved.</div>
+		</div>
+		<div class="footer__bottom _mob">
+			<div class="footer__bottom-top-mob">
+				<a
+					target="_blank"
+					href="./policy-privacy-2.pdf"
+					class="footer__policy-privacy"
+					>privacy policy</a
+				>
+				<a
+					target="_blank"
+					href="./TUD_General_User_Agreement-EN.pdf"
+					class="footer__license"
+					>License Agreement</a
+				>
+			</div>
+			<div class="footer__bottom-bottom-mob">
+				<div class="footer__copyright">
+					2022 &#xa9; TUD, tud toy gifts trading
+				</div>
+
+				<div class="footer__all-rights">All rights reserved.</div>
+			</div>
+			<div class="footer__bottom-payment">
+				<img src="./assets/images/shop/visa.png" alt="visa mastercard" />
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+		<script src="assets/js/app.js"></script>
+	</body>
+</html>
