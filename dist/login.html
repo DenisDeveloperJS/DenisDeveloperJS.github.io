@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		
+		<!-- Подключения CSS -->
+		<link rel="stylesheet" href="assets/css/style.min.css" />
+		
+		<!-- Useful meta tags -->
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<meta name="robots" content="index, follow" />
+		<meta name="google" content="notranslate" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="description" content="" />
+		
+		<link
+			rel="stylesheet"
+			defer
+			href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+		/>
+		<script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+		<script
+			defer
+			src="https://unpkg.com/leaflet.gridlayer.googlemutant@latest/dist/Leaflet.GoogleMutant.js"
+		></script>
+		
+		<script
+			async
+			defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8Skr2jsNNIuaoTxoZFTtzVhnhL7Zxd_I"
+		></script>
+		
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon/ico-32.png"
+		/>
+		
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon/ico-100.png"
+		/>
+		<title>Gekko | Sign In</title>
+	</head>
+	<body>
+		
+		<main class="auth-main">
+			<section class="auth">
+				<div class="auth__content">
+					<div class="auth__left">
+						<a href="index.html">
+							<img
+								src="./assets/images/logo-gekko.svg"
+								alt="Gekko"
+								class="auth__logo"
+							/>
+						</a>
+					</div>
+					<div class="auth__right">
+						<form method="POST" novalidate class="auth__right-content">
+							<div class="auth__right-top">
+								<h1 class="auth__title">Log in</h1>
+								<h2 class="auth__subtitle">
+									Don't have an account?
+									<a href="signup.html" class="link">Sign up</a>
+								</h2>
+								<div class="auth__right-inputs">
+									<div class="container-input">
+										<input
+											type="text"
+											placeholder="Login"
+											name="login"
+											class="auth__input input input_auth auth__input-login"
+										/>
+										<div class="err-message">Error</div>
+									</div>
+		
+									<div class="container-input">
+										<input
+											placeholder="Password"
+											type="password"
+											name="password"
+											class="auth__input input input_auth auth__input-pass"
+										/>
+										<div class="err-message">Error</div>
+									</div>
+								</div>
+							</div>
+							<div class="auth__right-bottom">
+								<button type="submit" class="auth__submit btn btn_green">
+									Sign in
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		
+
+		<script defer src="assets/js/app.js"></script>
+	</body>
+</html>
