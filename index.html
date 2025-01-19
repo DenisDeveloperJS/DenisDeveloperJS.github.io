@@ -13,24 +13,25 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				height: 100vh;
-				background: linear-gradient(135deg, #6e8efb, #a777e3);
+				min-height: 100vh;
+				background: linear-gradient(135deg, #4facfe, #00f2fe);
 				color: #fff;
 				text-align: center;
-				overflow: hidden;
 			}
 
 			.container {
 				background: rgba(255, 255, 255, 0.1);
-				padding: 30px;
-				border-radius: 15px;
+				padding: 40px;
+				border-radius: 20px;
 				backdrop-filter: blur(10px);
-				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 				animation: fadeIn 1.5s ease-in-out;
+				width: 90%;
+				max-width: 600px;
 			}
 
 			h1 {
-				font-size: 32px;
+				font-size: 36px;
 				margin-bottom: 20px;
 				animation: slideDown 1s ease-in-out;
 			}
@@ -42,7 +43,9 @@
 			}
 
 			.link {
-				display: block;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
 				background: rgba(255, 255, 255, 0.2);
 				padding: 12px 20px;
 				border-radius: 8px;
@@ -50,14 +53,8 @@
 				color: #fff;
 				font-size: 18px;
 				font-weight: bold;
-				transition: all 0.3s ease-in-out;
 				position: relative;
 				overflow: hidden;
-			}
-
-			.link:hover {
-				background: rgba(255, 255, 255, 0.4);
-				transform: scale(1.05);
 			}
 
 			.link::before {
@@ -75,7 +72,100 @@
 				left: 0;
 			}
 
-			/* Анимации */
+			.info {
+				font-size: 14px;
+				opacity: 0.8;
+				padding: 2px 6px;
+				border-radius: 5px;
+				white-space: nowrap;
+			}
+
+			.frontend {
+				background-color: #ffcc00;
+				color: #000;
+			}
+
+			.fullstack {
+				background-color: #00cc66;
+				color: #fff;
+			}
+
+			.footer {
+				margin-top: 20px;
+				padding: 15px;
+				background: rgba(255, 255, 255, 0.1);
+				border-radius: 10px;
+			}
+
+			.footer p {
+				margin: 0;
+				font-size: 20px;
+				font-weight: bold;
+			}
+
+			.social-links {
+				display: flex;
+				gap: 15px;
+				justify-content: center;
+				align-items: center;
+
+				margin-top: 20px;
+			}
+
+			.social-links a {
+				display: inline-block;
+			}
+
+			.social-links img {
+				width: 30px;
+				height: 30px;
+				transition: transform 0.3s ease-in-out;
+			}
+
+			.social-links img:hover {
+				transform: scale(1.2);
+			}
+
+			/* Адаптивные стили */
+			@media (max-width: 768px) {
+				.container {
+					width: 95%;
+					padding: 30px;
+				}
+
+				h1 {
+					font-size: 28px;
+				}
+
+				.info {
+					margin-top: 5px;
+				}
+			}
+
+			@media (max-width: 480px) {
+				.container {
+					width: 100%;
+					min-height: 100vh;
+					border-radius: 0;
+					padding: 20px;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+				}
+
+				h1 {
+					font-size: 24px;
+				}
+
+				.link {
+					font-size: 16px;
+					padding: 10px;
+					display: flex;
+					flex-wrap: wrap;
+					gap: 15px;
+				}
+			}
+
 			@keyframes fadeIn {
 				from {
 					opacity: 0;
@@ -107,29 +197,78 @@
 					target="_blank"
 					href="https://denisdeveloperjs.github.io/cleaning-crm/"
 					class="link"
-					>📊 Cleaning CRM</a
 				>
-				<a target="_blank" href="https://ticketgo.uz" class="link"
-					>🎫 Tickets Kaufen</a
-				>
+					<span>📊 Cleaning CRM</span>
+					<span class="info fullstack">Full Stack | DE</span>
+				</a>
+				<a target="_blank" href="https://ticketgo.uz" class="link">
+					<span>🎫 Tickets Kaufen</span>
+					<span class="info frontend">Frontend | EN, RU, UZ</span>
+				</a>
 				<a
 					target="_blank"
 					href="https://denisdeveloperjs.github.io/gekko/"
 					class="link"
-					>🛒 Thailand Marketplace</a
 				>
+					<span>🛒 Thailand Marketplace</span>
+					<span>
+						<span class="info frontend">Frontend | EN</span>
+					</span>
+				</a>
 				<a
 					target="_blank"
 					href="https://denisdeveloperjs.github.io/tud-nft/"
 					class="link"
-					>🦆 TUD NFT Landing Page</a
 				>
+					<span>🦆 TUD NFT Landing Page</span>
+					<span class="info frontend">Frontend | EN, RU</span>
+				</a>
 				<a
 					target="_blank"
 					href="https://denisdeveloperjs.github.io/tud-toy/"
 					class="link"
-					>🧸 TUD Toy Landing Page
+				>
+					<span>🧸 TUD Toy Landing Page</span>
+					<span class="info frontend">Frontend | EN</span>
 				</a>
+			</div>
+			<div class="footer">
+				<p>👋 Denys Lukianov</p>
+				<div class="social-links">
+					<a href="https://github.com/DenisDeveloperJS" target="_blank">
+						<img
+							src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+							alt="GitHub"
+						/>
+					</a>
+					<a
+						href="https://www.linkedin.com/in/denisdeveloperua"
+						target="_blank"
+					>
+						<img
+							src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+							alt="LinkedIn"
+						/>
+					</a>
+					<a href="https://t.me/denisdeveloperjs" target="_blank">
+						<img
+							src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png"
+							alt="Telegram"
+						/>
+					</a>
+					<a href="mailto:denisdevelop4604@gmail.com">
+						<img
+							src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
+							alt="Email"
+						/>
+					</a>
+					<a href="https://wa.me/4915206055589" target="_blank">
+						<img
+							src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+							alt="WhatsApp"
+						/>
+					</a>
+				</div>
 			</div>
 		</div>
 	</body>
