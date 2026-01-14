@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Meine Projekte</title>
+		<title>Portfolio - Denys Lukianov</title>
 		<style>
 			/* Общие стили */
 			body {
@@ -28,11 +28,104 @@
 				animation: fadeIn 1.5s ease-in-out;
 				width: 90%;
 				max-width: 600px;
+				position: relative;
+			}
+
+			/* --- СТИЛИ ВЫПАДАЮЩЕГО МЕНЮ --- */
+			.lang-dropdown {
+				position: absolute;
+				top: 15px;
+				right: 15px;
+				z-index: 100;
+			}
+
+			.dropbtn {
+				background: rgba(255, 255, 255, 0.25);
+				color: white;
+				padding: 5px 12px;
+				border: 1px solid rgba(255, 255, 255, 0.4);
+				border-radius: 30px;
+				cursor: pointer;
+				transition: all 0.3s ease;
+				display: flex;
+				align-items: center;
+				gap: 8px;
+				outline: none;
+			}
+
+			.dropbtn:hover {
+				background: rgba(255, 255, 255, 0.4);
+				transform: scale(1.05);
+			}
+
+			.flag-icon {
+				width: 18px;
+				height: 18px;
+				border-radius: 50%;
+				object-fit: cover;
+				border: 2px solid #fff;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+			}
+
+			.arrow-icon {
+				font-size: 10px;
+				transition: transform 0.3s;
+				opacity: 0.8;
+			}
+
+			.dropdown-content {
+				display: none;
+				position: absolute;
+				right: 0;
+				top: 45px;
+				background-color: #ffffff;
+				min-width: 180px;
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+				border-radius: 20px;
+				overflow: hidden;
+				animation: fadeInMenu 0.3s ease;
+				text-align: left;
+			}
+
+			.dropdown-content a {
+				color: #333;
+				padding: 12px 20px;
+				text-decoration: none;
+				display: flex;
+				align-items: center;
+				gap: 12px;
+				font-size: 16px;
+				font-weight: 600;
+				transition: background 0.2s;
+			}
+
+			.dropdown-content a:hover {
+				background-color: #f0f4f8;
+				color: #000;
+			}
+
+			.show {
+				display: block;
+			}
+			.rotate {
+				transform: rotate(180deg);
+			}
+
+			@keyframes fadeInMenu {
+				from {
+					opacity: 0;
+					transform: translateY(-10px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
 			}
 
 			h1 {
 				font-size: 36px;
 				margin-bottom: 20px;
+				margin-top: 20px;
 				animation: slideDown 1s ease-in-out;
 			}
 
@@ -42,6 +135,7 @@
 				gap: 15px;
 			}
 
+			/* Обычная ссылка */
 			.link {
 				display: flex;
 				justify-content: space-between;
@@ -55,6 +149,7 @@
 				font-weight: bold;
 				position: relative;
 				overflow: hidden;
+				z-index: 2; /* Чтобы ссылка была над линией */
 			}
 
 			.link::before {
@@ -66,11 +161,48 @@
 				height: 100%;
 				background: rgba(255, 255, 255, 0.3);
 				transition: left 0.4s ease-in-out;
+				z-index: -1;
 			}
 
 			.link:hover::before {
 				left: 0;
 			}
+
+			/* --- СТИЛИ ДЛЯ ГРУППИРОВКИ (СВЯЗЬ) --- */
+			.project-group {
+				display: flex;
+				flex-direction: column;
+				gap: 10px; /* Расстояние между связанными элементами */
+				position: relative;
+			}
+
+			/* Стиль для дочерней ссылки (Админка) */
+			.sub-link {
+				margin-left: 40px; /* Сдвигаем вправо */
+				width: calc(100% - 40px); /* Уменьшаем ширину */
+				font-size: 16px; /* Чуть меньше шрифт */
+				background: rgba(255, 255, 255, 0.15); /* Чуть темнее фон */
+			}
+
+			/* Линия-ветка */
+			.sub-link-wrapper {
+				position: relative;
+			}
+
+			/* Рисуем L-образную линию */
+			.sub-link-wrapper::after {
+				content: "";
+				position: absolute;
+				top: -35px; /* Тянем вверх к родителю */
+				left: 20px; /* Позиция слева */
+				bottom: 50%; /* До середины элемента */
+				width: 15px;
+				border-left: 2px solid rgba(255, 255, 255, 0.6);
+				border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+				border-bottom-left-radius: 10px; /* Скругление угла */
+				z-index: 1;
+			}
+			/* -------------------------------------- */
 
 			.info {
 				font-size: 14px;
@@ -108,7 +240,6 @@
 				gap: 15px;
 				justify-content: center;
 				align-items: center;
-
 				margin-top: 20px;
 			}
 
@@ -126,19 +257,13 @@
 				transform: scale(1.2);
 			}
 
-			/* Адаптивные стили */
 			@media (max-width: 768px) {
 				.container {
 					width: 95%;
 					padding: 30px;
 				}
-
 				h1 {
 					font-size: 28px;
-				}
-
-				.info {
-					margin-top: 5px;
 				}
 			}
 
@@ -152,17 +277,28 @@
 					flex-direction: column;
 					justify-content: center;
 				}
-
+				.lang-dropdown {
+					top: 20px;
+					right: 20px;
+				}
 				h1 {
 					font-size: 24px;
+					margin-top: 60px;
 				}
-
 				.link {
 					font-size: 16px;
 					padding: 10px;
 					display: flex;
 					flex-wrap: wrap;
 					gap: 15px;
+				}
+				/* Адаптив для ветки на мобилках */
+				.sub-link {
+					margin-left: 25px;
+					width: calc(100% - 25px);
+				}
+				.sub-link-wrapper::after {
+					left: 10px;
 				}
 			}
 
@@ -191,14 +327,63 @@
 	</head>
 	<body>
 		<div class="container">
-			<h1>Meine Projekte</h1>
+			<div class="lang-dropdown">
+				<button onclick="toggleDropdown()" class="dropbtn" id="currentLangBtn">
+					<img
+						id="currentFlagImg"
+						src="https://flagcdn.com/w80/de.png"
+						class="flag-icon"
+						alt="DE"
+					/>
+					<span class="arrow-icon">▼</span>
+				</button>
+				<div id="langDropdown" class="dropdown-content">
+					<a href="#" onclick="changeLanguage('de')"
+						><img
+							src="https://flagcdn.com/w80/de.png"
+							class="flag-icon"
+							alt="DE"
+						/>
+						Deutsch</a
+					>
+					<a href="#" onclick="changeLanguage('en')"
+						><img
+							src="https://flagcdn.com/w80/gb.png"
+							class="flag-icon"
+							alt="EN"
+						/>
+						English</a
+					>
+
+					<a href="#" onclick="changeLanguage('ru')"
+						><img
+							src="https://flagcdn.com/w80/ru.png"
+							class="flag-icon"
+							alt="RU"
+						/>
+						Русский</a
+					>
+
+					<a href="#" onclick="changeLanguage('uk')"
+						><img
+							src="https://flagcdn.com/w80/ua.png"
+							class="flag-icon"
+							alt="UA"
+						/>
+						Українська</a
+					>
+				</div>
+			</div>
+
+			<h1 data-key="title">Meine Projekte</h1>
+
 			<div class="links">
 				<a
 					target="_blank"
 					href="https://denisdeveloperjs.github.io/cleaning-crm/"
 					class="link"
 				>
-					<span>📊 Cleaning CRM</span>
+					<span data-key="proj1_title">📊 Cleaning CRM</span>
 					<span class="info fullstack">Full Stack | DE</span>
 				</a>
 				<a
@@ -206,7 +391,7 @@
 					href="https://denisdeveloperjs.github.io/tud-nft/"
 					class="link"
 				>
-					<span>🦆 TUD NFT Landing Page</span>
+					<span data-key="proj2_title">🦆 TUD NFT Landing Page</span>
 					<span class="info frontend">Frontend | EN, RU</span>
 				</a>
 				<a
@@ -214,15 +399,23 @@
 					href="https://denisdeveloperjs.github.io/tud-toy/"
 					class="link"
 				>
-					<span>🧸 TUD Toy Landing Page</span>
+					<span data-key="proj3_title">🧸 TUD Toy Landing Page</span>
 					<span class="info frontend">Frontend | EN</span>
 				</a>
-				<a target="_blank" href="https://ticketgo.uz" class="link">
-					<span>🎫 Tickets Kaufen</span>
-					<span class="info frontend">Frontend | EN, RU, UZ</span>
-				</a>
+
+				<div class="project-group">
+					<a target="_blank" href="https://ticketgo.uz" class="link">
+						<span data-key="proj4_main">🎫 TicketGo - Ticket Platform</span>
+						<span class="info frontend">Frontend | EN, RU, UZ</span>
+					</a>
+
+					<a target="_blank" href="https://ticketgo.uz/admin" class="link">
+						<span data-key="proj4_admin">🔧 TicketGo - Admin Panel</span>
+						<span class="info fullstack">Full Stack | RU</span>
+					</a>
+				</div>
 				<a target="_blank" href="https://wortebuch.github.io/" class="link">
-					<span>📖 Mein Wörtebuch</span>
+					<span data-key="proj5_title">📖 Mein Wörtebuch</span>
 					<span class="info frontend">Frontend | DE, PL, UA</span>
 				</a>
 				<a
@@ -230,52 +423,139 @@
 					href="https://denisdeveloperjs.github.io/gekko/"
 					class="link"
 				>
-					<span>🛒 Thailand Marketplace</span>
-					<span>
-						<span class="info frontend">Frontend | EN</span>
-					</span>
+					<span data-key="proj6_title">🛒 Thailand Marketplace</span>
+					<span><span class="info frontend">Frontend | EN</span></span>
 				</a>
-			
 			</div>
+
 			<div class="footer">
 				<p>👋 Denys Lukianov</p>
 				<div class="social-links">
-					<a href="https://github.com/DenisDeveloperJS" target="_blank">
-						<img
+					<a href="https://github.com/DenisDeveloperJS" target="_blank"
+						><img
 							src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
 							alt="GitHub"
-						/>
-					</a>
-					<a
-						href="https://www.linkedin.com/in/denisdeveloperua"
-						target="_blank"
-					>
-						<img
+					/></a>
+					<a href="https://www.linkedin.com/in/denisdeveloperua" target="_blank"
+						><img
 							src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
 							alt="LinkedIn"
-						/>
-					</a>
-					<a href="https://t.me/denisdeveloperjs" target="_blank">
-						<img
+					/></a>
+					<a href="https://t.me/denisdeveloperjs" target="_blank"
+						><img
 							src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png"
 							alt="Telegram"
-						/>
-					</a>
-					<a href="mailto:denisdevelop4604@gmail.com">
-						<img
+					/></a>
+					<a href="mailto:denisdevelop4604@gmail.com"
+						><img
 							src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
 							alt="Email"
-						/>
-					</a>
-					<a href="https://wa.me/4915206055589" target="_blank">
-						<img
+					/></a>
+					<a href="https://wa.me/4915206055589" target="_blank"
+						><img
 							src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
 							alt="WhatsApp"
-						/>
-					</a>
+					/></a>
 				</div>
 			</div>
 		</div>
+
+		<script>
+			const translations = {
+				de: {
+					title: "Meine Projekte",
+					proj1_title: "📊 Cleaning CRM",
+					proj2_title: "🦆 TUD NFT Landing Page",
+					proj3_title: "🧸 TUD Toy Landing Page",
+					proj4_main: "🎫 TicketGo – Ticketplattform",
+					proj4_admin: "🔧 TicketGo – Admin-Panel",
+					proj5_title: "📖 Mein Wörterbuch",
+					proj6_title: "🛒 Thailand Marketplace",
+				},
+				en: {
+					title: "My Projects",
+					proj1_title: "📊 Cleaning CRM",
+					proj2_title: "🦆 TUD NFT Landing Page",
+					proj3_title: "🧸 TUD Toy Landing Page",
+					proj4_main: "🎫 TicketGo – Ticket Platform",
+					proj4_admin: "🔧 TicketGo – Admin Panel",
+					proj5_title: "📖 My Dictionary",
+					proj6_title: "🛒 Thailand Marketplace",
+				},
+				ru: {
+					title: "Мои Проекты",
+					proj1_title: "📊 Cleaning CRM",
+					proj2_title: "🦆 TUD NFT Лендинг",
+					proj3_title: "🧸 TUD Toy Лендинг",
+					proj4_main: "🎫 TicketGo – Платформа билетов",
+					proj4_admin: "🔧 TicketGo – Админ панель",
+					proj5_title: "📖 Мой Словарь",
+					proj6_title: "🛒 Маркетплейс Таиланд",
+				},
+				uk: {
+					title: "Мої Проєкти",
+					proj1_title: "📊 Cleaning CRM",
+					proj2_title: "🦆 TUD NFT Лендинг",
+					proj3_title: "🧸 TUD Toy Лендинг",
+					proj4_main: "🎫 TicketGo – Платформа квитків",
+					proj4_admin: "🔧 TicketGo – Адмін панель",
+					proj5_title: "📖 Мій Словник",
+					proj6_title: "🛒 Маркетплейс Таїланд",
+				},
+			};
+
+			const countryCodes = { en: "gb", de: "de", ru: "ru", uk: "ua" };
+
+			function toggleDropdown() {
+				document.getElementById("langDropdown").classList.toggle("show");
+				document.querySelector(".arrow-icon").classList.toggle("rotate");
+			}
+
+			function changeLanguage(lang) {
+				const elements = document.querySelectorAll("[data-key]");
+				elements.forEach(el => {
+					const key = el.getAttribute("data-key");
+					if (translations[lang] && translations[lang][key]) {
+						el.textContent = translations[lang][key];
+					}
+				});
+				document.documentElement.lang = lang;
+				document.title = translations[lang]["title"] + " - Denys Lukianov";
+				const flagCode = countryCodes[lang];
+				document.getElementById(
+					"currentFlagImg"
+				).src = `https://flagcdn.com/w80/${flagCode}.png`;
+				const dropdown = document.getElementById("langDropdown");
+				const arrow = document.querySelector(".arrow-icon");
+				if (dropdown.classList.contains("show")) {
+					dropdown.classList.remove("show");
+					arrow.classList.remove("rotate");
+				}
+			}
+
+			window.onclick = function (event) {
+				if (!event.target.closest(".dropbtn")) {
+					var dropdowns = document.getElementsByClassName("dropdown-content");
+					var arrow = document.querySelector(".arrow-icon");
+					for (var i = 0; i < dropdowns.length; i++) {
+						var openDropdown = dropdowns[i];
+						if (openDropdown.classList.contains("show")) {
+							openDropdown.classList.remove("show");
+							arrow.classList.remove("rotate");
+						}
+					}
+				}
+			};
+
+			document.addEventListener("DOMContentLoaded", () => {
+				const userLang = navigator.language || navigator.userLanguage;
+				let defaultLang = "en";
+				if (userLang.startsWith("de")) defaultLang = "de";
+				else if (userLang.startsWith("ru")) defaultLang = "ru";
+				else if (userLang.startsWith("uk") || userLang.startsWith("ua"))
+					defaultLang = "uk";
+				changeLanguage(defaultLang);
+			});
+		</script>
 	</body>
 </html>
-
