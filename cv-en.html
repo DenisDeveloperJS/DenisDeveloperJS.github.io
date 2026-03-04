@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CV – Denys Lukianov</title>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: "Inter", sans-serif;
+				background: #f0f2f5;
+				color: #1a1a2e;
+				font-size: 14px;
+				line-height: 1.5;
+			}
+
+			.page {
+				width: 210mm;
+				min-height: 297mm;
+				margin: 20px auto;
+				background: white;
+				box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
+				display: grid;
+				grid-template-columns: 200px 1fr;
+			}
+
+			/* SIDEBAR */
+			.sidebar {
+				background: #1a1a2e;
+				color: white;
+				padding: 32px 20px;
+			}
+
+			.photo-container {
+				width: 110px;
+				height: 110px;
+				border-radius: 50%;
+				border: 3px solid #4a9eff;
+				overflow: hidden;
+				margin: 0 auto 20px;
+				background: #2d2d44;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.photo-container img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			.sidebar h1 {
+				font-size: 16px;
+				font-weight: 700;
+				text-align: center;
+				color: white;
+				margin-bottom: 4px;
+			}
+
+			.sidebar .role {
+				text-align: center;
+				font-size: 11px;
+				color: #4a9eff;
+				font-weight: 500;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+				margin-bottom: 24px;
+			}
+
+			.sidebar-section {
+				margin-bottom: 24px;
+			}
+
+			.sidebar-section h3 {
+				font-size: 10px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				color: #4a9eff;
+				font-weight: 600;
+				border-bottom: 1px solid #2d2d44;
+				padding-bottom: 6px;
+				margin-bottom: 12px;
+			}
+
+			.contact-item {
+				display: flex;
+				align-items: flex-start;
+				gap: 8px;
+				margin-bottom: 10px;
+				font-size: 11px;
+				color: #c8d3e8;
+			}
+
+			.contact-item .icon {
+				color: #4a9eff;
+				font-size: 12px;
+				min-width: 14px;
+				margin-top: 1px;
+			}
+
+			.contact-item a {
+				color: #c8d3e8;
+				text-decoration: none;
+			}
+
+			.skill-item {
+				margin-bottom: 8px;
+			}
+
+			.skill-name {
+				font-size: 11px;
+				color: #c8d3e8;
+			}
+
+			.lang-item {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 8px;
+			}
+
+			.lang-name {
+				font-size: 11px;
+				color: #c8d3e8;
+			}
+
+			.lang-level {
+				font-size: 10px;
+				color: #4a9eff;
+				font-weight: 500;
+			}
+
+			/* MAIN */
+			.main {
+				padding: 32px 28px;
+			}
+
+			.section {
+				margin-bottom: 26px;
+			}
+
+			.section-title {
+				font-size: 13px;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 1.5px;
+				color: #1a1a2e;
+				padding-bottom: 6px;
+				border-bottom: 2px solid #4a9eff;
+				margin-bottom: 16px;
+			}
+
+			.profile-text {
+				font-size: 12.5px;
+				color: #444;
+				line-height: 1.65;
+			}
+
+			/* Experience */
+			.exp-item {
+				margin-bottom: 18px;
+				position: relative;
+				padding-left: 14px;
+			}
+
+			.exp-item::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 7px;
+				width: 6px;
+				height: 6px;
+				background: #4a9eff;
+				border-radius: 50%;
+			}
+
+			.exp-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+				margin-bottom: 2px;
+			}
+
+			.exp-title {
+				font-size: 13px;
+				font-weight: 600;
+				color: #1a1a2e;
+			}
+
+			.exp-period {
+				font-size: 10.5px;
+				color: #4a9eff;
+				font-weight: 500;
+				white-space: nowrap;
+			}
+
+			.exp-company {
+				font-size: 11.5px;
+				color: #666;
+				margin-bottom: 6px;
+			}
+
+			.exp-desc {
+				font-size: 11.5px;
+				color: #555;
+				line-height: 1.6;
+			}
+
+			.exp-desc ul {
+				list-style: none;
+				padding: 0;
+			}
+
+			.exp-desc ul li {
+				padding-left: 12px;
+				position: relative;
+				margin-bottom: 3px;
+			}
+
+			.exp-desc ul li::before {
+				content: "→";
+				position: absolute;
+				left: 0;
+				color: #4a9eff;
+				font-size: 10px;
+			}
+
+			/* Projects */
+			.project-item {
+				margin-bottom: 16px;
+				padding: 12px 14px;
+				background: #f7f9ff;
+				border-left: 3px solid #4a9eff;
+				border-radius: 0 6px 6px 0;
+			}
+
+			.project-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+				margin-bottom: 4px;
+			}
+
+			.project-name {
+				font-size: 13px;
+				font-weight: 600;
+				color: #1a1a2e;
+			}
+
+			.project-badge {
+				font-size: 9px;
+				background: #4a9eff;
+				color: white;
+				padding: 2px 7px;
+				border-radius: 10px;
+				font-weight: 500;
+			}
+
+			.project-tech {
+				font-size: 10.5px;
+				color: #7b61ff;
+				font-weight: 500;
+				margin-bottom: 5px;
+			}
+
+			.project-desc {
+				font-size: 11.5px;
+				color: #555;
+				line-height: 1.6;
+			}
+
+			.project-link {
+				font-size: 10.5px;
+				color: #4a9eff;
+				text-decoration: none;
+				margin-top: 4px;
+				display: inline-block;
+			}
+
+			@media print {
+				body {
+					background: white;
+				}
+				.page {
+					margin: 0;
+					box-shadow: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page">
+			<div class="sidebar">
+				<div class="photo-container">
+					<img src="./me.jpg" alt="Denys Lukianov" />
+				</div>
+				<h1>Denys Lukianov</h1>
+				<div class="role">Full-Stack Developer</div>
+
+				<div class="sidebar-section">
+					<h3>Contact</h3>
+					<div class="contact-item">
+						<span class="icon">📍</span>
+						<span>Winkelstraße 13<br />58452 Witten, DE</span>
+					</div>
+					<div class="contact-item">
+						<span class="icon">📞</span>
+						<a href="tel:+4915206055589">+49 1520 605 55 89</a>
+					</div>
+					<div class="contact-item">
+						<span class="icon">✉️</span>
+						<a href="mailto:denisdevelop4604@gmail.com"
+							>denisdevelop4604<br />@gmail.com</a
+						>
+					</div>
+					<div class="contact-item">
+						<span class="icon">🔗</span>
+						<a href="https://denisdeveloperjs.github.io" target="_blank"
+							>Portfolio</a
+						>
+					</div>
+					<div class="contact-item">
+						<span class="icon">💼</span>
+						<a href="https://linkedin.com/in/denisdeveloperua" target="_blank"
+							>LinkedIn</a
+						>
+					</div>
+					<div class="contact-item">
+						<span class="icon">🐙</span>
+						<a href="https://github.com/DenisDeveloperJS" target="_blank"
+							>GitHub</a
+						>
+					</div>
+				</div>
+
+				<div class="sidebar-section">
+					<h3>Languages</h3>
+					<div class="lang-item">
+						<span class="lang-name">Ukrainian</span
+						><span class="lang-level">Native</span>
+					</div>
+					<div class="lang-item">
+						<span class="lang-name">Russian</span
+						><span class="lang-level">Native</span>
+					</div>
+					<div class="lang-item">
+						<span class="lang-name">German</span
+						><span class="lang-level">Fluent</span>
+					</div>
+					<div class="lang-item">
+						<span class="lang-name">English</span
+						><span class="lang-level">B2</span>
+					</div>
+				</div>
+
+				<div class="sidebar-section">
+					<h3>Frontend</h3>
+					<div class="skill-item">
+						<div class="skill-name">React.js / Next.js</div>
+					</div>
+					<div class="skill-item">
+						<div class="skill-name">Material UI</div>
+					</div>
+					<div class="skill-item">
+						<div class="skill-name">SCSS, JavaScript ES6</div>
+					</div>
+					<div class="skill-item">
+						<div class="skill-name">Angular.js (Vue.js Telegram Mini App)</div>
+					</div>
+				</div>
+
+				<div class="sidebar-section">
+					<h3>Backend</h3>
+					<div class="skill-item">
+						<div class="skill-name">Java / Spring</div>
+					</div>
+					<div class="skill-item">
+						<div class="skill-name">PHP / MySQL / PostgreSQL</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="main">
+				<div class="section">
+					<div class="section-title">Profile</div>
+					<p class="profile-text">
+						Dedicated Full-Stack Developer with over 5 years of practical
+						experience in web development. Specialized in scalable web
+						applications with React.js, Angular.js, and Java / PHP. Experience
+						in developing high-traffic platforms with more than 20,000 active
+						users. Quadrilingual (UA/RU/EN/DE) – ideal for international teams
+						and clients.
+					</p>
+				</div>
+
+				<div class="section">
+					<div class="section-title">Professional Experience</div>
+
+					<div class="exp-item">
+						<div class="exp-header">
+							<div class="exp-title">Web Developer (Part-time)</div>
+							<div class="exp-period">March 2023 – Present</div>
+						</div>
+						<div class="exp-company">HDS, Witten</div>
+						<div class="exp-desc">
+							<ul>
+								<li>
+									Development and maintenance of the internal company admin
+									panel for 100+ employees
+								</li>
+								<li>Implementation of time tracking and reporting features</li>
+								<li>
+									Technical support and further development of company-specific
+									features
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="exp-item">
+						<div class="exp-header">
+							<div class="exp-title">Freelance Full-Stack Developer</div>
+							<div class="exp-period">Nov. 2019 – Present</div>
+						</div>
+						<div class="exp-company">Self-employed</div>
+						<div class="exp-desc">
+							<ul>
+								<li>
+									Development of client projects: Landing Pages, CRM systems,
+									marketplaces
+								</li>
+								<li>
+									Full implementation of frontend and backend including database
+									integration
+								</li>
+								<li>
+									Multilingual projects for international clients (DE, EN, RU,
+									UZ)
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="section">
+					<div class="section-title">Projects</div>
+
+					<div class="project-item">
+						<div class="project-header">
+							<div class="project-name">🎫 TicketGo — Ticketing Platform</div>
+							<span class="project-badge">Active · 20,000+ Users</span>
+						</div>
+						<div class="project-tech">
+							Full-Stack · React.js (Transitioning to Next.js) · Java ·
+							PostgreSQL
+						</div>
+						<div class="project-desc">
+							High-traffic ticketing platform for concerts and cinema screenings
+							in Uzbekistan. Over 20,000 active users. Multilingual interface
+							(EN/RU/UZ), secure payment processing, seat reservation, and QR
+							code validation.
+						</div>
+						<a href="https://ticketgo.uz" class="project-link" target="_blank"
+							>→ ticketgo.uz</a
+						>
+					</div>
+
+					<div class="project-item">
+						<div class="project-header">
+							<div class="project-name">📊 HDS Admin Panel</div>
+							<span class="project-badge"
+								>Full-Stack · Active · Production</span
+							>
+						</div>
+						<div class="project-tech">React.js · PHP · MySQL</div>
+						<div class="project-desc">
+							Internal company admin panel for a firm with 100 employees.
+							Includes time tracking, facility management, reporting, and
+							specific operational functions. In daily production use. Full
+							admin panel for a cleaning company with customer management, job
+							scheduling, and reporting dashboard.
+						</div>
+						<a
+							href="https://denisdeveloperjs.github.io/cleaning-crm/"
+							class="project-link"
+							target="_blank"
+							>→ View Demo</a
+						>
+					</div>
+
+					<div class="project-item">
+						<div class="project-header">
+							<div class="project-name">🛒 Thailand Marketplace</div>
+							<span class="project-badge">Frontend</span>
+						</div>
+						<div class="project-tech">React.js · HTML · SCSS</div>
+						<div class="project-desc">
+							Modern e-commerce marketplace with product catalog, filtering, and
+							responsive design.
+						</div>
+						<a
+							href="https://denisdeveloperjs.github.io/gekko/"
+							class="project-link"
+							target="_blank"
+							>→ View Demo</a
+						>
+					</div>
+				</div>
+
+				<div
+					style="
+						text-align: right;
+						font-size: 10px;
+						color: #aaa;
+						margin-top: 10px;
+					"
+				>
+					Witten, February 26, 2025
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

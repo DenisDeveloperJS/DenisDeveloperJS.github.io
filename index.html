@@ -257,6 +257,38 @@
 				transform: scale(1.2);
 			}
 
+			/* CV Link Styles */
+			.cv-wrapper {
+				margin: 15px 0;
+				text-align: center;
+			}
+
+			.cv-link {
+				display: inline-flex;
+				align-items: center;
+				gap: 6px;
+				padding: 8px 16px;
+				background: rgba(255, 255, 255, 0.25);
+				border: 2px solid rgba(255, 255, 255, 0.5);
+				border-radius: 20px;
+				color: #fff;
+				text-decoration: none;
+				font-weight: bold;
+				font-size: 14px;
+				transition: box-shadow 0.3s ease;
+				backdrop-filter: blur(5px);
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+			}
+
+			.cv-link:hover {
+				box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+			}
+
+			.cv-link::before {
+				content: '📋';
+				font-size: 16px;
+			}
+
 			@media (max-width: 768px) {
 				.container {
 					width: 95%;
@@ -461,6 +493,11 @@
 							alt="WhatsApp"
 					/></a>
 				</div>
+				<div class="cv-wrapper">
+					<a id="cvLink" href="cv-de.html" target="_blank" class="cv-link" data-key="cv_text">
+						Mein Lebenslauf
+					</a>
+				</div>
 			</div>
 		</div>
 
@@ -475,6 +512,7 @@
 					proj4_admin: "🔧 TicketGo – Admin-Panel",
 					proj5_title: "📖 Mein Wörterbuch",
 					proj6_title: "🛒 Thailand Marketplace",
+					cv_text: "Mein Lebenslauf",
 				},
 				en: {
 					title: "My Projects",
@@ -485,6 +523,7 @@
 					proj4_admin: "🔧 TicketGo – Admin Panel",
 					proj5_title: "📖 My Dictionary",
 					proj6_title: "🛒 Thailand Marketplace",
+					cv_text: "My Resume",
 				},
 				ru: {
 					title: "Мои Проекты",
@@ -495,6 +534,7 @@
 					proj4_admin: "🔧 TicketGo – Админ панель",
 					proj5_title: "📖 Мой Словарь",
 					proj6_title: "🛒 Маркетплейс Таиланд",
+					cv_text: "Моё Резюме",
 				},
 				uk: {
 					title: "Мої Проєкти",
@@ -505,7 +545,15 @@
 					proj4_admin: "🔧 TicketGo – Адмін панель",
 					proj5_title: "📖 Мій Словник",
 					proj6_title: "🛒 Маркетплейс Таїланд",
+					cv_text: "Моє Резюме",
 				},
+			};
+
+			const cvFiles = {
+				de: "cv-de.html",
+				en: "cv-en.html",
+				ru: "cv-ru.html",
+				uk: "cv-ua.html"
 			};
 
 			const countryCodes = { en: "gb", de: "de", ru: "ru", uk: "ua" };
@@ -529,6 +577,13 @@
 				document.getElementById(
 					"currentFlagImg"
 				).src = `https://flagcdn.com/w80/${flagCode}.png`;
+
+				// Update CV link
+				const cvLink = document.getElementById("cvLink");
+				if (cvLink && cvFiles[lang]) {
+					cvLink.href = cvFiles[lang];
+				}
+
 				const dropdown = document.getElementById("langDropdown");
 				const arrow = document.querySelector(".arrow-icon");
 				if (dropdown.classList.contains("show")) {
@@ -561,8 +616,7 @@
 				changeLanguage(defaultLang);
 			});
 		</script>
+	</script>
+
 	</body>
 </html>
-
-
-
